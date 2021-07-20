@@ -1,0 +1,148 @@
+/*
+- 1280
+- 1150
+- 658
+- 480
+
+*/
+
+
+@media only screen and (max-width:1280px) {
+
+    /*  ABOUT US  */
+    .main-panel {
+        width: 47%;
+    }
+
+    .section {
+        margin-left: clamp(500px, 47%, 1200px);
+    }
+
+    .whoami {
+        width: 95%;
+    }
+
+
+    .bio__img img {
+        height: 250px;
+    }
+
+    .bio__data {
+        width: 60%;
+        padding-left: 20px;
+    }
+
+    .about-card {
+        width: clamp(150px, 33%, 300px);
+    }
+}
+
+@media only screen and (max-width:1048px) {
+
+    .main-panel {
+        position: relative;
+        height: 700px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .whoami {
+        margin-bottom: 30px;
+    }
+
+    .mp-content {
+        margin-top: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*  ABOUT US  */
+    .section {
+        margin-left: 0;
+        width: 100vw;
+    }
+
+    .bio {
+        width: 80%;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .bio__data {
+        width: clamp(300px, 50%, 900px);
+        padding-left: 60px;
+    }
+
+}
+
+
+@media only screen and (max-width:658px) {
+
+    /*  ABOUT US  */
+
+    .bio__img {
+        width: clamp(200px, 90%, 1200px);
+    }
+
+    .bio__data {
+        width: 100%;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .whoami h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+
+    .about-skill {        
+        background: linear-gradient(90deg,var(--smoke),var(--smoke)),url(/IMG/car.jpg) no-repeat fixed center;
+        background-size: cover;        
+        height: 200px;
+        padding: 0;
+    }
+
+    .about-card {
+        width: 100%;
+        height: 100%;
+/*        border-right: 2px solid white;*/
+        border: none;
+        justify-content: center;        
+    }
+
+    .about-card > .f-icon * {
+        color: white;
+    }
+
+    .about-card h1{
+        color:white;
+    }
+    
+    .about-card p {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width:480px) {
+
+    /*    Main      */
+    .mp-content h1 {
+        font-size: clamp(2.4rem, 10vw, 3rem);
+        letter-spacing: 1px;
+    }
+
+    .mp-btn {
+        flex-direction: column;
+    }
+
+    .mp-btn > div {
+        margin: 10px 0;
+    }
+
+    /*  ABOUT US  */
+
+
+}
