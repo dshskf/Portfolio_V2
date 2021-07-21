@@ -1,0 +1,11 @@
+.education-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.education-logo img {
+  width: 40px;
+}
+
+/*# sourceMappingURL=education.css.map */
