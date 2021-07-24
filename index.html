@@ -1,6 +1,6 @@
 <html>
-    
-    <head>
+
+<head>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/about.css">
     <link rel="stylesheet" href="CSS/education.css">
@@ -31,6 +31,17 @@
                 <i class="f-icon" data-feather="github"></i>
                 <i class="f-icon" data-feather="linkedin"></i>
             </div>
+        </div>
+        <div class="section section--welcome">
+            <h1 class="welcome-h1"></h1>
+
+            <div class="bounce-dot">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
         </div>
         <div class="section section--about">
             <div class="title title--about">
@@ -128,6 +139,35 @@
     <script>
         feather.replace()
         $(document).ready(function() {
+            (() => {
+                setTimeout(() => {
+                    $('.bounce-dot').hide()
+                    appendText()
+                }, 4500)
+
+                let appendText = () => {
+                    let words = "Welcome...",
+                        wordIndex = 0;
+                    let func = () => {
+                        $('.welcome-h1').html(words.substr(0, wordIndex))
+                        wordIndex += 1
+                        if (wordIndex > words.length) {
+                            clearInterval(ivl)
+                        }
+                    }
+
+                    let ivl = setInterval(func, 200)
+                    let clears = () => {
+                        clearInterval(ivl)
+                    }
+                }
+
+                setTimeout(() => {
+                    $('.section--welcome').hide()
+                }, 8000)
+
+            })()
+
             //            $(".about-card").click(() => {
             // document.documentElement.style.setProperty('--blue', 'red');
             // })
@@ -138,5 +178,8 @@
 
 
         })
+
     </script>
-</body></html>
+</body>
+
+</html>
