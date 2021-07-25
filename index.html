@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -5,13 +6,13 @@
     <link rel="stylesheet" href="CSS/about.css">
     <link rel="stylesheet" href="CSS/education.css">
     <link rel="stylesheet" href="CSS/media.css">
+    <title>Alexander Kevin</title>
 </head>
 <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
 <body>
     <div class="container">
         <div class="main-panel">
-            <!--            <img src="/IMG/car.jpg">-->
             <div class="mp-content">
                 <h1>Alexander Kevin</h1>
                 <p>Web Developer</p>
@@ -32,9 +33,8 @@
                 <i class="f-icon" data-feather="linkedin"></i>
             </div>
         </div>
-        <div class="section section--welcome">
-            <h1 class="welcome-h1"></h1>
 
+        <div class="section section--welcome">
             <div class="bounce-dot">
                 <div></div>
                 <div></div>
@@ -44,8 +44,9 @@
 
         </div>
         <div class="section section--about">
+            <div class="about-bg"></div>
             <div class="title title--about">
-                <h1>About</h1>
+
             </div>
             <div class="whoami">
                 <h1>Who am <b>I</b>?</h1>
@@ -81,7 +82,7 @@
                             <p>Banchelor</p>
                         </div>
                         <div class="bio__item">
-                            <label>City</label>
+                            <label>Location</label>
                             <p>Tangerang</p>
                         </div>
                     </div>
@@ -108,16 +109,61 @@
             </div>
         </div>
 
-        <div class="section section--education">
-            <div class="title title--education">
-                <h1>Education</h1>
-            </div>
-            <div class="education-content">
-                <div class="education-logo">
-                    <img src="IMG/car.jpg">
-                </div>
-                <div class="education-list">
+        <div class="section section--break">
+            <h1>EDUCATION</h1>
+        </div>
 
+        <div class="section section--education">
+            <div class="education-content">
+                <div class="education-list">
+                    <div class="education-item">
+                        <div>
+                            <img src="IMG/ipeka.png">
+                        </div>
+                        <div>
+                            <h1>Elementary School</h1>
+                            <p>IPEKA - Balikpapan</p>
+                        </div>
+                        <div>
+                            <p>2008</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div>
+                            <img src="IMG/ipeka.png">
+                        </div>
+                        <div>
+                            <h1>Junior High School</h1>
+                            <p>IPEKA - Balikpapan</p>
+                        </div>
+                        <div>
+                            <p>2013</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div>
+                            <img src="IMG/sma5.jfif">
+                        </div>
+                        <div>
+                            <h1>Senior High School</h1>
+                            <p>SMA 5 - Balikpapan</p>
+                        </div>
+                        <div>
+                            <p>2015</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div>
+                            <img src="IMG/pu.png">
+                        </div>
+                        <div>
+                            <h1>Junior High School</h1>
+                            <p>President University</p>
+                        </div>
+                        <div>
+                            <p>2017</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -141,30 +187,29 @@
         $(document).ready(function() {
             (() => {
                 setTimeout(() => {
-                    $('.bounce-dot').hide()
-                    appendText()
-                }, 4500)
-
-                let appendText = () => {
-                    let words = "Welcome...",
-                        wordIndex = 0;
-                    let func = () => {
-                        $('.welcome-h1').html(words.substr(0, wordIndex))
-                        wordIndex += 1
-                        if (wordIndex > words.length) {
-                            clearInterval(ivl)
-                        }
-                    }
-
-                    let ivl = setInterval(func, 200)
-                    let clears = () => {
-                        clearInterval(ivl)
-                    }
-                }
-
-                setTimeout(() => {
                     $('.section--welcome').hide()
-                }, 8000)
+                }, 5000)
+
+                //                let appendText = () => {
+                //                    let words = "Welcome...",
+                //                        wordIndex = 0;
+                //                    let func = () => {
+                //                        $('.welcome-h1').html(words.substr(0, wordIndex))
+                //                        wordIndex += 1
+                //                        if (wordIndex > words.length) {
+                //                            clearInterval(ivl)
+                //                        }
+                //                    }
+                //
+                //                    let ivl = setInterval(func, 200)
+                //                    let clears = () => {
+                //                        clearInterval(ivl)
+                //                    }
+                //                }
+                //
+                //                setTimeout(() => {
+                //                    $('.section--welcome').hide()
+                //                }, 9500)
 
             })()
 
@@ -178,8 +223,5 @@
 
 
         })
-
     </script>
-</body>
-
-</html>
+</body></html>

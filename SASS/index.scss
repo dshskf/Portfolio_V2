@@ -1,17 +1,7 @@
 @use 'keyframes'as *;
+@use 'color'as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-
-$blue: #00a7ff;
-$green: #00ff00;
-$orange: #ff5800;
-$smoke: rgba(0, 0, 0, 0.4);
-$purple: #bc52af;
-$grey-text: #4d4d4d;
-$silver: #7c7c7c;
-$light-silver: #e6e6e6;
-$padding-about: 30px;
-
 
 * {
     box-sizing: border-box;
@@ -134,12 +124,14 @@ body {
 
 // WELCOME
 
-.section--welcome {    
+.section--welcome {
     width: 55vw;
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+
+    @include welcome(rotate, 1.5s, 8s);
 
     h1 {
         font-size: 3rem;

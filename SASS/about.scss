@@ -1,10 +1,10 @@
-@use 'index'as *;
+@use 'color'as *;
 @use 'keyframes'as k;
 
 .section {
     margin-left: clamp(540px, 45vw, 1200px);
     margin-bottom: 40px;
-    width: clamp(542px, 54vw, 1200px);
+    width: clamp(542px, 55vw, 1200px);
     padding-right: 0;
     position: relative;
     display: flex;
@@ -12,17 +12,32 @@
     align-items: center;
 }
 
+
+.about-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55vw;
+    height: 330px;
+    background: $blue;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 45%;
+    transform: translateY(-40px);
+    @include k.about(a-title, 1s, 5s, 1);
+}
+
 .title {
+    width: 100px;
     height: 60px;
     background: $blue;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    border-radius: 8px;
+    border-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     position: absolute;
-    top: 40px;
+    top: 20px;
     left: -#{$padding-about};
 
     &:before {
@@ -35,32 +50,33 @@
         box-shadow: 0 0 10px 3px #7caeff;
         border-radius: 50%;
     }
+}
 
-    h1 {
-        color: white;
-        font-size: 2.5rem;
-        font-weight: normal;
-        margin-left: 50px;
-        margin-right: 20px;
-        text-shadow: 0 0 4px #ffffff;
-    }
+.title--about {
+    @include k.about(a-title, 1s, 5s, 1);
 }
 
 .whoami {
     width: 97%;
-    margin-top: 120px;
+    margin-top: 40px;
     margin-bottom: 20px;
     text-align: justify;
     color: $grey-text;
     padding: 0 $padding-about;
 
+    * {
+        color: white;
+    }
+
+
     h1 {
         font-size: 3.5rem;
+        margin-bottom: 20px;
+        @include k.about(a-whoami, .5s, 6s, 1);
     }
 
     p {
-        margin: 30px 0;
-        color: $silver;
+        @include k.about(a-whoami, .5s, 6.4s, 1);        
         line-height: 30px;
         font-size: 1rem;
     }
@@ -69,6 +85,7 @@
 .bio {
     width: 100%;
     padding-left: 30px;
+    margin-top: 7vw;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -79,24 +96,25 @@
 
 .bio__img {
     width: clamp(200px, 35%, 1200px);
-    background: red;
     position: relative;
+    @include k.about(a-info, .5s, 7s, 1);
 
     &:before,
     &:after {
         content: "";
         position: absolute;
-        width: 100;
-        height: 100px;
-
-        border: 2px solid $blue;
-        background: $blue;
+        width: 80px;
+        height: 80px;
+        border: 3px solid $blue;
+        border-radius: 20px;
         z-index: -1;
     }
 
     &:before {
         top: -10px;
         left: -10px;
+        border: 6px solid $blue;
+
     }
 
     &:after {
@@ -107,7 +125,7 @@
     img {
         width: 100%;
         height: 300px;
-        border-radius: 4px;
+        border-radius: 20px;
     }
 }
 
@@ -118,6 +136,8 @@
     align-items: center;
     justify-content: space-around;
     position: relative;
+    filter: opacity(0);
+    @include k.about(a-info, .5s, 7s, 1);
 }
 
 .bio__item {
@@ -147,15 +167,20 @@
 .about-card {
     width: clamp(150px, 30%, 300px);
     height: 200px;
-
-    /*    border: 1px solid #e6e6e6;*/
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-right: 1px solid $light-silver;
 
+    @include k.about(a-whoami, .7s, 8s, 1);
+
+    &:nth-child(2) {
+        @include k.about(a-whoami, .7s, 8.2s, 1);
+    }
+
     &:nth-child(3) {
+        @include k.about(a-whoami, .7s, 8.5s, 1);
         border: none;
     }
 

@@ -1,0 +1,74 @@
+   <div class="section section--welcome">
+            <div class="bounce-dot">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+        </div>
+        <div class="section section--about">
+            <div class="about-bg"></div>
+            <div class="title title--about">
+                
+            </div>
+            <div class="whoami">
+                <h1>Who am <b>I</b>?</h1>
+                <p>Hi I'm <b>Jackson Ford</b> On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
+            </div>
+            <div class="bio">
+                <div class="bio__img">
+                    <img src="IMG/elon.jpg">
+                </div>
+
+                <div class="bio__data">
+                    <div>
+                        <div class="bio__item">
+                            <label>Name</label>
+                            <p>Alexander Kevin</p>
+                        </div>
+                        <div class="bio__item">
+                            <label>Birthday</label>
+                            <p>18 March 1999</p>
+                        </div>
+                        <div class="bio__item">
+                            <label>Age</label>
+                            <p>18</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bio__item">
+                            <label>Religion</label>
+                            <p>Catholic</p>
+                        </div>
+                        <div class="bio__item">
+                            <label>Degree</label>
+                            <p>Banchelor</p>
+                        </div>
+                        <div class="bio__item">
+                            <label>Location</label>
+                            <p>Tangerang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-skill">
+                <div class="about-card">
+                    <i class="f-icon" data-feather="globe"></i>
+                    <h1>WEB</h1>
+                    <p>Frontend - Backend</p>
+                </div>
+                <div class="about-card">
+                    <i class="f-icon" data-feather="phone"></i>
+                    <h1>ANDROID</h1>
+                    <p>React Native</p>
+                </div>
+                <div class="about-card">
+                    <i class="f-icon" data-feather="repeat"></i>
+                    <h1>RPA</h1>
+                    <p>UIPath</p>
+                </div>
+
+            </div>
+        </div>

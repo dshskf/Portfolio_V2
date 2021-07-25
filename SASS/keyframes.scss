@@ -1,3 +1,5 @@
+@use 'color'as *;
+
 @mixin main($frame: title, $time:2s, $delay: 0s) {
     @include trn($frame $time ease-in-out $delay backwards);
 
@@ -53,17 +55,50 @@
             transform: scale(1.1);
         }
     }
+}
 
-    @keyframes liftup {
+
+@mixin about($frame: bounce, $time:1s, $delay: 0s, $iteration:infinite, $alternate:normal) {
+    filter: opacity(0);
+    @include trn($frame $time ease-in $iteration $delay forwards $alternate);
+
+    @keyframes a-title {
         0% {
-            transform: translateY(0);
+            top: -200px;
+            filter: opacity(0);
         }
 
         100% {
-            transform: translateY(-100vh);
-        }        
+            top: 40px;
+            filter: opacity(1);
+        }
+    }
+
+    @keyframes a-whoami {
+        0% {
+            margin-top: 40px;
+            filter: opacity(0);
+        }
+
+        100% {
+            margin-top: 0px;
+            filter: opacity(1);
+        }
+    }
+
+    @keyframes a-info {
+        0% {
+            transform: translateX(100px);
+            filter: opacity(0);
+        }
+
+        100% {
+            transform: translateX(0px);
+            filter: opacity(1);
+        }
     }
 }
+
 
 
 @mixin trn($transition) {
