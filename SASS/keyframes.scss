@@ -59,6 +59,7 @@
 
 
 @mixin about($frame: bounce, $time:1s, $delay: 0s, $iteration:infinite, $alternate:normal) {
+    
     filter: opacity(0);
     @include trn($frame $time ease-in $iteration $delay forwards $alternate);
 

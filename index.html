@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/about.css">
     <link rel="stylesheet" href="CSS/education.css">
+    <link rel="stylesheet" href="CSS/skill.css">
     <link rel="stylesheet" href="CSS/media.css">
     <title>Alexander Kevin</title>
 </head>
@@ -50,7 +51,10 @@
             </div>
             <div class="whoami">
                 <h1>Who am <b>I</b>?</h1>
-                <p>Hi I'm <b>Jackson Ford</b> On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
+                <p>Hi I'm <b>Jackson Ford</b> On her way she met a copy. The copy warned the Little Blind Text, that
+                    where it came from it would have been rewritten a thousand times and everything that was left from
+                    its origin would be the word "and" and the Little Blind Text should turn around and return to its
+                    own, safe country.</p>
             </div>
             <div class="bio">
                 <div class="bio__img">
@@ -92,28 +96,33 @@
             <div class="about-skill">
                 <div class="about-card">
                     <i class="f-icon" data-feather="globe"></i>
-                    <h1>WEB</h1>
-                    <p>Frontend - Backend</p>
+                    <div class="a-card-title">
+                        <h1>WEB</h1>
+                        <p>Frontend - Backend</p>
+                    </div>
                 </div>
                 <div class="about-card">
                     <i class="f-icon" data-feather="phone"></i>
-                    <h1>ANDROID</h1>
-                    <p>React Native</p>
+                    <div class="a-card-title">
+                        <h1>ANDROID</h1>
+                        <p>React Native</p>
+                    </div>
                 </div>
                 <div class="about-card">
                     <i class="f-icon" data-feather="repeat"></i>
-                    <h1>RPA</h1>
-                    <p>UIPath</p>
+                    <div class="a-card-title">
+                        <h1>RPA</h1>
+                        <p>UIPath</p>
+                    </div>
                 </div>
 
             </div>
         </div>
 
-        <div class="section section--break">
-            <h1>EDUCATION</h1>
-        </div>
-
         <div class="section section--education">
+            <div class="education-title">
+                <h1>EDUCATION</h1>
+            </div>
             <div class="education-content">
                 <div class="education-list">
                     <div class="education-item">
@@ -184,11 +193,13 @@
     <script src="Package/jquery.min.js"></script>
     <script>
         feather.replace()
-        $(document).ready(function() {
+        $(document).ready(function () {
             (() => {
                 setTimeout(() => {
                     $('.section--welcome').hide()
-                }, 5000)
+                }, 0)
+
+
 
                 //                let appendText = () => {
                 //                    let words = "Welcome...",
@@ -217,11 +228,38 @@
             // document.documentElement.style.setProperty('--blue', 'red');
             // })
             //            
-            //            $('.container').on('scroll',e=>{
-            ////                console.log(e.target.scrollTop)
-            //            })
+            let iMainPanel = 0,
+                iSkill = 0,
+                iTemp = 0,
+                inc = 10,
+                start = 820;
+
+            $('.container').on('scroll', e => {
+                let position = e.target.scrollTop
+
+                // Main Panel   
+                if (iMainPanel <= 45) {
+                    if (position > start) {
+                        iMainPanel = -(position - start) / 18;
+                    }
+                    if (position < start && iMainPanel < 0) {
+                        iMainPanel = 0
+                        $('.main-panel').show()
+                    }
+                    $('.main-panel').css('transform', `translateX(${iMainPanel}vw)`)
+                } else {
+                    $('.main-panel').hide()
+                }
+                // Skill
+
+                // $('.section--skill').css('margin-left', `${iMainPanel}vw`)                
+                iTemp = position
+            })
+
 
 
         })
     </script>
-</body></html>
+</body>
+
+</html>

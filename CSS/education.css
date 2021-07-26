@@ -1,14 +1,10 @@
-.section--break {
-  background: #00a7ff;
-  justify-content: center;
-  height: 100px;
+.education-title {
+  margin: 20px 0;
+  padding: 10px 0;
+  border-bottom: 3px solid #00a7ff;
 }
-.section--break h1 {
-  color: white;
-}
-
-.section--education {
-  height: 100vh;
+.education-title h1 {
+  color: #4d4d4d;
 }
 
 .education-content {
@@ -17,7 +13,6 @@
   justify-content: center;
   align-items: center;
   width: 95%;
-  margin-top: 20px;
 }
 
 .education-logo {
