@@ -15,7 +15,7 @@
   left: 0;
   width: 55vw;
   height: 330px;
-  background: #00a7ff;
+  background: #F7A91B;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 45%;
   transform: translateY(-40px);
@@ -24,7 +24,7 @@
 .title {
   width: 100px;
   height: 60px;
-  background: #00a7ff;
+  background: #F7A91B;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -38,11 +38,10 @@
 .title:before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: white;
   left: 6px;
-  box-shadow: 0 0 10px 3px #7caeff;
   border-radius: 50%;
 }
 
@@ -87,14 +86,14 @@
   position: absolute;
   width: 80px;
   height: 80px;
-  border: 3px solid #00a7ff;
+  border: 3px solid #F7A91B;
   border-radius: 20px;
   z-index: -1;
 }
 .bio__img:before {
   top: -10px;
   left: -10px;
-  border: 6px solid #00a7ff;
+  border: 6px solid #F7A91B;
 }
 .bio__img:after {
   bottom: -10px;
@@ -122,10 +121,14 @@
 .bio__item label {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #00a7ff;
+  color: white;
+  background: #F7A91B;
+  padding: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .bio__item p {
-  color: #4d4d4d;
+  color: white;
   margin: 10px 0;
 }
 
@@ -140,23 +143,19 @@
 
 .about-card {
   width: clamp(150px, 30%, 400px);
-  height: 200px;
+  height: 220px;
   display: flex;
   padding: 20px;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid #f2f2f2;
-  box-shadow: 0 0 8px #f2f2f2;
+  border: 3px solid #F7A91B;
   border-radius: 20px;
-}
-.about-card:nth-child(3) {
-  border: none;
 }
 .about-card > .f-icon {
   width: clamp(50px, 3.5vw, 80px);
   height: clamp(50px, 3vw, 80px);
-  color: #00a7ff;
+  color: #F7A91B;
 }
 
 .a-card-title {
@@ -165,14 +164,13 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  color: white;
 }
 .a-card-title h1 {
   margin-top: 30px;
   font-size: 22px;
-  color: #4d4d4d;
 }
 .a-card-title p {
-  color: #4d4d4d;
   margin: 10px 0;
 }
 

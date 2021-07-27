@@ -15,7 +15,7 @@ html {
 body {
     padding: 0;
     font-family: 'Lato', sans-serif;
-    background: #ffffff;
+    background: $background;
 }
 
 ::-webkit-scrollbar {
@@ -45,7 +45,8 @@ body {
     background-position: center;
     background-size: cover;
     overflow: hidden;
-    box-shadow: 0 0 10px 3px #b4b4b4;    
+    background: $dark-background;
+//    box-shadow: 0 0 10px 3px #b4b4b4;    
 
     img {
         position: absolute;
@@ -54,6 +55,12 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+.mp-bg{
+    img{
+        filter: grayscale(1);
     }
 }
 
@@ -67,7 +74,7 @@ body {
     }
 
     p {
-        color: $blue;
+        color: $primary;
         font-size: clamp(2rem, 3vw, 3rem);
         font-weight: bold;
         // @include main(title, 2s, .2s);
@@ -87,7 +94,7 @@ body {
         justify-content: center;
         padding: 10px 15px;
         margin-right: 20px;
-        background: $blue;
+        background: $primary;
         border-radius: 4px;
         cursor: pointer;
         // @include main(button, 1s, 2s);
@@ -152,7 +159,7 @@ body {
     div {
         width: 40px;
         height: 40px;
-        background: $light-silver;
+        background: $primary;
         // @include welcome();
 
         &:nth-child(2) {

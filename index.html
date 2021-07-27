@@ -14,6 +14,9 @@
 <body>
     <div class="container">
         <div class="main-panel">
+            <div class="mp-bg">
+                <img src="IMG/elon.png">
+            </div>
             <div class="mp-content">
                 <h1>Alexander Kevin</h1>
                 <p>Web Developer</p>
@@ -228,32 +231,45 @@
             // document.documentElement.style.setProperty('--blue', 'red');
             // })
             //            
-            let iMainPanel = 0,
+            const section_about = $('.section--about'),
+                section_edu = $('.section--education'),
+                section_skill = $('.section--skill')
+
+            let iPosition = 0,
                 iSkill = 0,
-                iTemp = 0,
-                inc = 10,
-                start = 820;
+                start = 820,
+                scrolled = false;
 
             $('.container').on('scroll', e => {
                 let position = e.target.scrollTop
 
                 // Main Panel   
-                if (iMainPanel <= 45) {
+                if (Math.abs(iPosition) <= 45) {
+                    // If more than Education
                     if (position > start) {
-                        iMainPanel = -(position - start) / 18;
-                    }
-                    if (position < start && iMainPanel < 0) {
-                        iMainPanel = 0
+                        scrolled = false
+                        iPosition = -(position - start) / 18;
                         $('.main-panel').show()
                     }
-                    $('.main-panel').css('transform', `translateX(${iMainPanel}vw)`)
+
+                    // If less than education and postion not 0
+                    if (position < start && iPosition < 0) {
+                        iPosition = 0
+                    }
+
+                    if (Math.abs(iPosition) > 45 && !scrolled) {
+                        scrolled = true
+                        $('.container').scrollTop(section_about.outerHeight() + section_edu.outerHeight() + 160)
+                    }
+                    $('.section--skills').css('transform', `translateX(${iPosition / 1.05}vw)`)
+                    $('.main-panel').css('transform', `translateX(${iPosition}vw)`)
                 } else {
+                    iPosition = -(position - start) / 18;
+                    $('.section--skills').css('transform', `translateX(-45vw)`)                    
                     $('.main-panel').hide()
                 }
-                // Skill
+                // Skill                
 
-                // $('.section--skill').css('margin-left', `${iMainPanel}vw`)                
-                iTemp = position
             })
 
 
