@@ -16,6 +16,7 @@ body {
     padding: 0;
     font-family: 'Lato', sans-serif;
     background: $background;
+    -webkit-transform:translate3d(0,0,0);
 }
 
 ::-webkit-scrollbar {
@@ -46,7 +47,7 @@ body {
     background-size: cover;
     overflow: hidden;
     background: $dark-background;
-//    box-shadow: 0 0 10px 3px #b4b4b4;    
+//    box-shadow: 0 0 10px 3px $text;    
 
     img {
         position: absolute;
@@ -113,8 +114,7 @@ body {
 }
 
 .f-icon {
-    width: 25px;
-    height: 25px;
+    font-size: 25px;
     margin-right: 10px;
     color: white;
 }

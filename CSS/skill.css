@@ -5,4 +5,99 @@
   background: #F7A91B;
 }
 
+.skills-title {
+  position: absolute;
+  top: 0;
+  left: 4vw;
+  background: #232533;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.skills-title h1 {
+  color: #F7A91B;
+  padding: 20px;
+  text-shadow: 0 0 2px #F7A91B;
+}
+
+.skills-content {
+  margin-top: 250px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skills-list {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skills-details {
+  width: 40%;
+  height: 10px;
+}
+
+.card {
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #2f3140;
+  width: clamp(100px, 10vw, 400px);
+  height: clamp(100px, 10vw, 400px);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 0 0 #484a55, -4px -2px 0 #484a55, -8px -4px 0 #484a55, -12px -8px 0 #484a55, -16px -10px 0 #484a55, -16px -10px 6px #484a55;
+}
+.card:hover {
+  transform: translate(-16px, -10px);
+  background: #F7A91B;
+  box-shadow: none;
+}
+.card:hover .card-icon i {
+  color: white;
+  transform: scale(1.2);
+  text-shadow: 0 0 10px white;
+}
+
+.card-active {
+  box-shadow: none;
+  transform: translate(-16px, -10px);
+  background: #F7A91B;
+}
+.card-active .card-icon i {
+  color: white;
+  transform: scale(1.2);
+  text-shadow: 0 0 10px white;
+}
+
+.card-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card-icon i {
+  color: #F7A91B;
+  font-size: clamp(80px, 5vw, 120px);
+  text-shadow: 0 0 10px #F7A91B;
+}
+
+.skills-details {
+  border-left: 1px solid white;
+  height: 50%;
+}
+
 /*# sourceMappingURL=skill.css.map */

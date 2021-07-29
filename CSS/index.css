@@ -11,7 +11,8 @@ html {
 body {
   padding: 0;
   font-family: "Lato", sans-serif;
-  background: #1F2233;
+  background: #232533;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 ::-webkit-scrollbar {
@@ -41,7 +42,7 @@ body {
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  background: linear-gradient(90deg, #14182c, #1F2233);
+  background: #232533;
 }
 .main-panel img {
   position: absolute;
@@ -96,8 +97,7 @@ body {
 }
 
 .f-icon {
-  width: 25px;
-  height: 25px;
+  font-size: 25px;
   margin-right: 10px;
   color: white;
 }

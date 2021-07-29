@@ -84,7 +84,7 @@
 .bio {
     width: 95%;
     padding-left: 30px;
-    margin-top: 7vw;
+    margin-top: 6vw;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -110,8 +110,8 @@
     }
 
     &:before {
-        top: -10px;
-        left: -10px;
+        top: -15px;
+        left: -15px;
         border: 6px solid $primary;
 
     }
@@ -145,11 +145,10 @@
     label {
         font-weight: bold;
         font-size: 1.1rem;
-        color: white;
-        background: $primary;
-        padding: 10px;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
+        color: $primary;       
+        
+//        border-top-right-radius: 20px;
+//        border-bottom-right-radius: 20px;
     }
 
     p {

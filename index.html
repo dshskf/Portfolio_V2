@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="CSS/education.css">
     <link rel="stylesheet" href="CSS/skill.css">
     <link rel="stylesheet" href="CSS/media.css">
+    <script src="https://kit.fontawesome.com/f4202d1a18.js" crossorigin="anonymous"></script>
     <title>Alexander Kevin</title>
 </head>
-<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <div class="container">
         <div class="main-panel">
             <div class="mp-bg">
@@ -45,7 +46,6 @@
                 <div></div>
                 <div></div>
             </div>
-
         </div>
         <div class="section section--about">
             <div class="about-bg"></div>
@@ -68,7 +68,7 @@
                     <div>
                         <div class="bio__item">
                             <label>Name</label>
-                            <p>Alexander Kevin</p>
+                            <p>&#9733 Alexander Kevin</p>
                         </div>
                         <div class="bio__item">
                             <label>Birthday</label>
@@ -154,7 +154,7 @@
                     </div>
                     <div class="education-item">
                         <div>
-                            <img src="IMG/sma5.jfif">
+                            <img src="IMG/sma5.png">
                         </div>
                         <div>
                             <h1>Senior High School</h1>
@@ -180,102 +180,141 @@
             </div>
         </div>
         <div class="section section--skills">
+            <div class="skills-title">
+                <h1>Skills</h1>
+            </div>
+            <div class="skills-content">
+                <div class="skills-list">
+                    <div class="card card-active">
+                        <div class="card-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fab fa-node"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fab fa-android"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fab fa-laravel"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-details">
+                    
+                </div>
+
+            </div>
+            <div class="section section--experience">
 
 
+            </div>
+            <div class="section section--contact">
+
+
+            </div>
         </div>
-        <div class="section section--experience">
 
-
-        </div>
-        <div class="section section--contact">
-
-
-        </div>
-    </div>
-
-    <script src="Package/jquery.min.js"></script>
-    <script>
-        feather.replace()
-        $(document).ready(function () {
-            (() => {
-                setTimeout(() => {
-                    $('.section--welcome').hide()
-                }, 0)
+        <script src="Package/jquery.min.js"></script>
+        <script>
+            feather.replace()
+            $(document).ready(function() {
+                (() => {
+                    setTimeout(() => {
+                        $('.section--welcome').hide()
+                    }, 0)
 
 
 
-                //                let appendText = () => {
-                //                    let words = "Welcome...",
-                //                        wordIndex = 0;
-                //                    let func = () => {
-                //                        $('.welcome-h1').html(words.substr(0, wordIndex))
-                //                        wordIndex += 1
-                //                        if (wordIndex > words.length) {
-                //                            clearInterval(ivl)
-                //                        }
-                //                    }
-                //
-                //                    let ivl = setInterval(func, 200)
-                //                    let clears = () => {
-                //                        clearInterval(ivl)
-                //                    }
-                //                }
-                //
-                //                setTimeout(() => {
-                //                    $('.section--welcome').hide()
-                //                }, 9500)
+                    //                let appendText = () => {
+                    //                    let words = "Welcome...",
+                    //                        wordIndex = 0;
+                    //                    let func = () => {
+                    //                        $('.welcome-h1').html(words.substr(0, wordIndex))
+                    //                        wordIndex += 1
+                    //                        if (wordIndex > words.length) {
+                    //                            clearInterval(ivl)
+                    //                        }
+                    //                    }
+                    //
+                    //                    let ivl = setInterval(func, 200)
+                    //                    let clears = () => {
+                    //                        clearInterval(ivl)
+                    //                    }
+                    //                }
+                    //
+                    //                setTimeout(() => {
+                    //                    $('.section--welcome').hide()
+                    //                }, 9500)
 
-            })()
+                })()
 
-            //            $(".about-card").click(() => {
-            // document.documentElement.style.setProperty('--blue', 'red');
-            // })
-            //            
-            const section_about = $('.section--about'),
-                section_edu = $('.section--education'),
-                section_skill = $('.section--skill')
+                //            $(".about-card").click(() => {
+                // document.documentElement.style.setProperty('--blue', 'red');
+                // })
+                //            
+                const section_about = $('.section--about'),
+                    section_edu = $('.section--education'),
+                    section_skill = $('.section--skill')
 
-            let iPosition = 0,
-                iSkill = 0,
-                start = 820,
-                scrolled = false;
+                let iPosition = 0,
+                    iSkill = 0,
+                    start = 820,
+                    scrolled = false;
 
-            $('.container').on('scroll', e => {
-                let position = e.target.scrollTop
+                $('.container').on('scroll', e => {
+                    let position = e.target.scrollTop
 
-                // Main Panel   
-                if (Math.abs(iPosition) <= 45) {
-                    // If more than Education
-                    if (position > start) {
-                        scrolled = false
+                    // Main Panel   
+                    if (Math.abs(iPosition) <= 45) {
+                        // If more than Education
+                        if (position > start) {
+                            scrolled = false
+                            iPosition = -(position - start) / 18;
+                            $('.main-panel').show()
+                        }
+
+                        // If less than education and postion not 0
+                        if (position < start && iPosition < 0) {
+                            iPosition = 0
+                        }
+
+                        if (Math.abs(iPosition) > 45 && !scrolled) {
+                            scrolled = true
+                            $('.container').scrollTop(section_about.outerHeight() + section_edu.outerHeight() + 160)
+                        }
+                        $('.section--skills').css('transform', `translateX(${iPosition / 1.05}vw)`)
+                        $('.main-panel').css('transform', `translateX(${iPosition}vw)`)
+                    } else {
                         iPosition = -(position - start) / 18;
-                        $('.main-panel').show()
+                        $('.section--skills').css('transform', `translateX(-45vw)`)
+                        $('.main-panel').hide()
                     }
+                    // Skill                
 
-                    // If less than education and postion not 0
-                    if (position < start && iPosition < 0) {
-                        iPosition = 0
-                    }
+                })
 
-                    if (Math.abs(iPosition) > 45 && !scrolled) {
-                        scrolled = true
-                        $('.container').scrollTop(section_about.outerHeight() + section_edu.outerHeight() + 160)
-                    }
-                    $('.section--skills').css('transform', `translateX(${iPosition / 1.05}vw)`)
-                    $('.main-panel').css('transform', `translateX(${iPosition}vw)`)
-                } else {
-                    iPosition = -(position - start) / 18;
-                    $('.section--skills').css('transform', `translateX(-45vw)`)                    
-                    $('.main-panel').hide()
-                }
-                // Skill                
+
 
             })
 
-
-
-        })
-    </script>
+        </script>
 </body>
 
 </html>
