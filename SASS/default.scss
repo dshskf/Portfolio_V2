@@ -1,3 +1,5 @@
+$radius: 6px;
+
 @mixin flex($align:center, $justify:center, $dir:row) {
     display: flex;
     flex-direction: $dir;
@@ -5,3 +7,5 @@
     align-items: $align;
     flex-wrap: wrap;
 }
+
+

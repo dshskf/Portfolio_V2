@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="CSS/about.css">
     <link rel="stylesheet" href="CSS/education.css">
     <link rel="stylesheet" href="CSS/skill.css">
+    <link rel="stylesheet" href="CSS/experience.css">
     <link rel="stylesheet" href="CSS/media.css">
     <script src="https://kit.fontawesome.com/f4202d1a18.js" crossorigin="anonymous"></script>
     <title>Alexander Kevin</title>
@@ -48,7 +49,7 @@
             </div>
         </div>
         <div class="section section--about">
-            <div class="about-bg"></div>
+            <!--            <div class="about-bg"></div>-->
             <div class="title title--about">
 
             </div>
@@ -129,50 +130,38 @@
             <div class="education-content">
                 <div class="education-list">
                     <div class="education-item">
-                        <div>
-                            <img src="IMG/ipeka.png">
+                        <div class="ei-year">
+                            <p>2008</p>
                         </div>
-                        <div>
+                        <div class="ei-title">
                             <h1>Elementary School</h1>
                             <p>IPEKA - Balikpapan</p>
                         </div>
-                        <div>
-                            <p>2008</p>
-                        </div>
                     </div>
-                    <div class="education-item">
-                        <div>
-                            <img src="IMG/ipeka.png">
-                        </div>
-                        <div>
+                    <div class="education-item right">
+                        <div class="ei-title">
                             <h1>Junior High School</h1>
                             <p>IPEKA - Balikpapan</p>
                         </div>
-                        <div>
+                        <div class="ei-year">
                             <p>2013</p>
                         </div>
                     </div>
                     <div class="education-item">
-                        <div>
-                            <img src="IMG/sma5.png">
+                        <div class="ei-year">
+                            <p>2015</p>
                         </div>
-                        <div>
+                        <div class="ei-title">
                             <h1>Senior High School</h1>
                             <p>SMA 5 - Balikpapan</p>
                         </div>
-                        <div>
-                            <p>2015</p>
-                        </div>
                     </div>
-                    <div class="education-item">
-                        <div>
-                            <img src="IMG/pu.png">
-                        </div>
-                        <div>
+                    <div class="education-item right">
+                        <div class="ei-title">
                             <h1>Junior High School</h1>
                             <p>President University</p>
                         </div>
-                        <div>
+                        <div class="ei-year">
                             <p>2017</p>
                         </div>
                     </div>
@@ -217,18 +206,68 @@
                     </div>
                 </div>
                 <div class="skills-details">
-                    
+                    <div class="sd-title">
+                        <i class="fab fa-react"></i>
+                        <h1>React</h1>
+                    </div>
+                    <div class="sd-content">
+                        <p>&#8226 Redux</p>
+                        <p>&#8226 Redux-Saga</p>
+                        <p>&#8226 Styled-components</p>
+                        <p>&#8226 Context API</p>
+                        <p>&#8226 Router</p>
+                        <p>&#8226 React Hooks</p>
+                        <p>&#8226 PWA</p>
+                    </div>
                 </div>
 
             </div>
-            <div class="section section--experience">
-
-
+        </div>
+        <div class="section section--experience">
+            <div class="se-title">
+                <img src="/IMG/bca.png">
+                <h1>Bank Central Asia</h1>
+                <h2>RPA Developer</h2>
+                <p>February 2021 ~ October 2021</p>
             </div>
-            <div class="section section--contact">
-
-
+            <div class="se-content">
+                <div class="se-content-box">
+                    <div class="se-content-item">
+                        <label>Project</label>
+                        <div>
+                            <p>&#8226 GLOB</p>
+                        </div>
+                    </div>
+                    <div class="se-content-item">
+                        <label>Responsibility</label>
+                        <div>
+                            <p>&#8226 Automate Task</p>
+                            <p>&#8226 Excel Macro</p>
+                            <p>&#8226 Testing</p>
+                            <p>&#8226 Enhancing</p>
+                        </div>
+                    </div>
+                    <div class="se-content-item">
+                        <label>Technology</label>
+                        <div>
+                            <p>&#8226 Excel</p>
+                            <p>&#8226 UIPath</p>
+                            <p>&#8226 WinSCP</p>
+                            <p>&#8226 SAP</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="se-footer">
+                <img src="IMG/tbig.png" class="activated">                
+                <img src="IMG/enseval.png">                
+                <img src="IMG/idstar.jpg">
+                <img src="IMG/bca.png">
+            </div>
+        </div>
+        <div class="section section--contact">
+
+
         </div>
 
         <script src="Package/jquery.min.js"></script>
@@ -269,47 +308,53 @@
                 // document.documentElement.style.setProperty('--blue', 'red');
                 // })
                 //            
-                const section_about = $('.section--about'),
-                    section_edu = $('.section--education'),
-                    section_skill = $('.section--skill')
+                // const section_about = $('.section--about'),
+                //     section_edu = $('.section--education'),
+                //     section_skill = $('.section--skill')
 
-                let iPosition = 0,
-                    iSkill = 0,
-                    start = 820,
-                    scrolled = false;
+                // let iPosition = 0,
+                //     iSkill = 0,
+                //     start = 820,
+                //     scrolled = false;
+
+                // $('.container').on('scroll', e => {
+                //     let position = e.target.scrollTop
+
+                //     // Main Panel   
+                //     if (Math.abs(iPosition) <= 45) {
+                //         // If more than Education
+                //         if (position > start) {
+                //             scrolled = false
+                //             iPosition = -(position - start) / 18;
+                //             $('.main-panel').show()
+                //         }
+
+                //         // If less than education and postion not 0
+                //         if (position < start && iPosition < 0) {
+                //             iPosition = 0
+                //         }
+
+                //         if (Math.abs(iPosition) > 45 && !scrolled) {
+                //             scrolled = true
+                //             $('.container').scrollTop(section_about.outerHeight() + section_edu.outerHeight() + 160)
+                //         }
+                //         $('.section--skills').css('transform', `translateX(${iPosition / 1.05}vw)`)
+                //         $('.main-panel').css('transform', `translateX(${iPosition}vw)`)
+                //     } else {
+                //         iPosition = -(position - start) / 18;
+                //         $('.section--skills').css('transform', `translateX(-45vw)`)
+                //         $('.main-panel').hide()
+                //     }
+                //     // Skill                
+
+                // })
+                let isFocus = false,
+                    countPage = 1
 
                 $('.container').on('scroll', e => {
                     let position = e.target.scrollTop
 
-                    // Main Panel   
-                    if (Math.abs(iPosition) <= 45) {
-                        // If more than Education
-                        if (position > start) {
-                            scrolled = false
-                            iPosition = -(position - start) / 18;
-                            $('.main-panel').show()
-                        }
-
-                        // If less than education and postion not 0
-                        if (position < start && iPosition < 0) {
-                            iPosition = 0
-                        }
-
-                        if (Math.abs(iPosition) > 45 && !scrolled) {
-                            scrolled = true
-                            $('.container').scrollTop(section_about.outerHeight() + section_edu.outerHeight() + 160)
-                        }
-                        $('.section--skills').css('transform', `translateX(${iPosition / 1.05}vw)`)
-                        $('.main-panel').css('transform', `translateX(${iPosition}vw)`)
-                    } else {
-                        iPosition = -(position - start) / 18;
-                        $('.section--skills').css('transform', `translateX(-45vw)`)
-                        $('.main-panel').hide()
-                    }
-                    // Skill                
-
                 })
-
 
 
             })

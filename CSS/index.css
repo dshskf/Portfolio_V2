@@ -42,7 +42,7 @@ body {
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  background: #232533;
+  background: #fca311;
 }
 .main-panel img {
   position: absolute;
@@ -65,7 +65,7 @@ body {
   font-size: clamp(3rem, 4.5vw, 4rem);
 }
 .mp-content p {
-  color: #F7A91B;
+  color: #fca311;
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: bold;
 }
@@ -83,7 +83,7 @@ body {
   justify-content: center;
   padding: 10px 15px;
   margin-right: 20px;
-  background: #F7A91B;
+  background: #fca311;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -134,7 +134,7 @@ body {
 .bounce-dot div {
   width: 40px;
   height: 40px;
-  background: #F7A91B;
+  background: #fca311;
 }
 
 /*# sourceMappingURL=index.css.map */

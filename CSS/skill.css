@@ -1,26 +1,22 @@
 .section--skills {
-  width: 100vw;
   height: 100vh;
-  margin-top: 120px;
-  background: #F7A91B;
+  background: #fca311;
 }
 
 .skills-title {
   position: absolute;
-  top: 0;
-  left: 4vw;
   background: #232533;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 .skills-title h1 {
-  color: #F7A91B;
+  color: #fca311;
   padding: 20px;
-  text-shadow: 0 0 2px #F7A91B;
+  text-shadow: 0 0 2px #fca311;
 }
 
 .skills-content {
-  margin-top: 250px;
+  margin-top: 200px;
   width: 90%;
   display: flex;
   justify-content: space-around;
@@ -34,11 +30,6 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.skills-details {
-  width: 40%;
-  height: 10px;
 }
 
 .card {
@@ -56,15 +47,14 @@
   margin: 20px;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 0 0 #484a55, -4px -2px 0 #484a55, -8px -4px 0 #484a55, -12px -8px 0 #484a55, -16px -10px 0 #484a55, -16px -10px 6px #484a55;
+  box-shadow: 0 0 0 #484a55;
 }
 .card:hover {
-  transform: translate(-16px, -10px);
-  background: #F7A91B;
+  background: white;
   box-shadow: none;
 }
 .card:hover .card-icon i {
-  color: white;
+  color: #232533;
   transform: scale(1.2);
   text-shadow: 0 0 10px white;
 }
@@ -72,7 +62,7 @@
 .card-active {
   box-shadow: none;
   transform: translate(-16px, -10px);
-  background: #F7A91B;
+  background: #fca311;
 }
 .card-active .card-icon i {
   color: white;
@@ -90,14 +80,66 @@
   flex-wrap: wrap;
 }
 .card-icon i {
-  color: #F7A91B;
+  color: #fca311;
   font-size: clamp(80px, 5vw, 120px);
-  text-shadow: 0 0 10px #F7A91B;
+  text-shadow: 0 0 10px #fca311;
 }
 
 .skills-details {
-  border-left: 1px solid white;
-  height: 50%;
+  width: 30%;
+  height: 500px;
+  background: #2f3140;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #232533;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sd-title {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  background: #1c1f2e;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 50px;
+}
+.sd-title:before, .sd-title:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fca311;
+  border-radius: 50%;
+}
+.sd-title:before {
+  left: 10px;
+}
+.sd-title:after {
+  right: 10px;
+}
+.sd-title i {
+  color: white;
+  font-size: 6rem;
+}
+.sd-title h1 {
+  margin-left: 10px;
+  color: white;
+}
+
+.sd-content {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-auto-rows: auto;
+}
+.sd-content p {
+  margin: 10px 0;
+  color: white;
 }
 
 /*# sourceMappingURL=skill.css.map */
