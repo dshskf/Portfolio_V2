@@ -1,14 +1,14 @@
 @use 'color'as *;
 @use 'default'as *;
 
-.section--skills {    
-    height: 100vh;    
+.section--skills {
+    height: 100vh;
     background: $primary;
 }
 
 .skills-title {
     position: absolute;
-    
+
     background: $background;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -32,6 +32,9 @@
 
 .skills-list {
     width: 60%;
+    background: $background;
+    border-radius: $radius;
+    margin: 40px 0;
     @include flex(center);
 }
 
@@ -48,7 +51,7 @@
     transition: all .2s;
     box-shadow: 0 0 0 #484a55;
 
-    &:hover {        
+    &:hover {
         background: $text;
         box-shadow: none;
 
@@ -65,14 +68,15 @@
 }
 
 .card-active {
-    box-shadow: none;    
-    background: $primary;
+    box-shadow: none;
+    //    background: $dark-background;
+    border: 2px solid $primary;
 
     .card-icon {
         i {
-            color: $text;
+            color: $primary;
             transform: scale(1.2);
-            text-shadow: 0 0 10px $text;
+            text-shadow: 0 0 4px $primary;
         }
 
     }
@@ -93,65 +97,39 @@
 
 
 .skills-details {
-    width: 30%;
+    width: 70%;
     height: 500px;
-    background: $light-background;
+    background: $background;
     border-radius: 20px;
     box-shadow: 0 0 10px $background;
     overflow: hidden;
-    @include flex(center, flex-start, column);    
 }
 
 
-.sd-title {
-    display: flex;
-    align-items: center;
-    padding: 20px 40px;
-    background: $dark-background;
-    border-radius: 20px;
-    position: relative;
-    margin-top: 50px;    
-
-    &:before,
-    &:after {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background: $primary;
-        border-radius: 50%;
-    }
-
-
-    &:before {
-        left: 10px;
-    }
-
-    &:after {
-        right: 10px;
-    }
-
+.sd-nav {
+    height: 10%;
+    background: $background;
 
     i {
-        color: white;
-        font-size: 6rem;
-    }
-
-    h1 {
-        margin-left: 10px;
-        color: white;
+        font-size: 1.5rem;
+        margin-left: 15px;
+        margin-top: 15px;
+        color: $text;
     }
 }
 
-.sd-content {
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-auto-rows: auto;
-
+.sd-panel {
+    height: 90%;
+    width: 100%;
+    background: $light-background;
+    padding: 10px 15px;
 
     p {
-        margin: 10px 0;
-        color: white;
+        color: $text;
+        margin: 2px 0;
+
+        b {
+            color: #cc3a3a;
+        }
     }
 }
