@@ -16,15 +16,16 @@
 }
 
 .skills-content {
-  margin-top: 200px;
-  width: 90%;
+  margin-top: 40px;
+  width: 95%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
 .skills-list {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -40,8 +41,8 @@
   align-items: center;
   flex-wrap: wrap;
   background: #2f3140;
-  width: clamp(100px, 10vw, 400px);
-  height: clamp(100px, 10vw, 400px);
+  width: clamp(100px, 4vw, 400px);
+  height: clamp(100px, 4vw, 400px);
   border-radius: 20px;
   overflow: hidden;
   margin: 20px;
@@ -61,7 +62,6 @@
 
 .card-active {
   box-shadow: none;
-  transform: translate(-16px, -10px);
   background: #fca311;
 }
 .card-active .card-icon i {
@@ -81,7 +81,7 @@
 }
 .card-icon i {
   color: #fca311;
-  font-size: clamp(80px, 5vw, 120px);
+  font-size: clamp(40px, 2.5vw, 120px);
   text-shadow: 0 0 10px #fca311;
 }
 

@@ -20,12 +20,13 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
+    width: 10px;
+    background: transparent;    
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #ff0000;
+    background: $primary;
+    border-radius: 8px;
 }
 
 .container {
@@ -71,14 +72,14 @@ body {
 
     h1 {
         font-size: clamp(3rem, 4.5vw, 4rem);
-        // @include main();
+        @include main();
     }
 
     p {
         color: $primary;
         font-size: clamp(2rem, 3vw, 3rem);
         font-weight: bold;
-        // @include main(title, 2s, .2s);
+        @include main(title, 2s, .2s);
     }
 }
 
@@ -98,12 +99,16 @@ body {
         background: $primary;
         border-radius: 4px;
         cursor: pointer;
-        // @include main(button, 1s, 2s);
+        @include main(button, 1s, 2s);
 
+        &:nth-child(1) {
+            border: 2px solid $text;
+        }
+        
         &:nth-child(2) {
             background: transparent;
             border: 1px solid white;
-            // @include main(button, 1s, 2.3s);
+            @include main(button, 1s, 2.3s);
         }
 
         a {
@@ -125,7 +130,7 @@ body {
     right: 20px;
     display: flex;
     align-items: center;
-    // @include main(footer, .5s, 3.2s);
+    @include main(footer, .5s, 3.2s);
 
     * {
         cursor: pointer;
@@ -142,7 +147,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    // @include welcome(rotate, 1.5s, 8s);
+    @include welcome(rotate, 1.5s, 8s);
 
     h1 {
         font-size: 3rem;
@@ -160,18 +165,18 @@ body {
         width: 40px;
         height: 40px;
         background: $primary;
-        // @include welcome();
+        @include welcome();
 
         &:nth-child(2) {
-            // @include welcome(bounce, .75s, .25s);
+            @include welcome(bounce, .75s, .25s);
         }
 
         &:nth-child(3) {
-            // @include welcome(bounce, .75s, .5s);
+            @include welcome(bounce, .75s, .5s);
         }
 
         &:nth-child(4) {
-            // @include welcome(bounce, .75s, .75s);
+            @include welcome(bounce, .75s, .75s);
         }
     }
 }

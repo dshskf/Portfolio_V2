@@ -2,7 +2,7 @@
 @use 'default'as *;
 
 .section--skills {    
-    height: 100vh;
+    height: 100vh;    
     background: $primary;
 }
 
@@ -21,16 +21,17 @@
 }
 
 .skills-content {
-    margin-top: 200px;
-    width: 90%;
+    margin-top: 40px;
+    width: 95%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
 
 .skills-list {
-    width: 50%;
+    width: 60%;
     @include flex(center);
 }
 
@@ -38,19 +39,13 @@
     -webkit-backface-visibility: hidden;
     @include flex(center, space-between, column);
     background: $light-background;
-    width: clamp(100px, 10vw, 400px);
-    height: clamp(100px, 10vw, 400px);
+    width: clamp(100px, 4vw, 400px);
+    height: clamp(100px, 4vw, 400px);
     border-radius: 20px;
     overflow: hidden;
     margin: 20px;
     cursor: pointer;
     transition: all .2s;
-//    box-shadow: 0 0 0 #484a55,
-//        -4px -2px 0 #484a55,
-//        -8px -4px 0 #484a55,
-//        -12px -8px 0 #484a55,
-//        -16px -10px 0 #484a55,
-//        -16px -10px 6px #484a55;
     box-shadow: 0 0 0 #484a55;
 
     &:hover {        
@@ -70,8 +65,7 @@
 }
 
 .card-active {
-    box-shadow: none;
-    transform: translate(-16px, -10px);
+    box-shadow: none;    
     background: $primary;
 
     .card-icon {
@@ -92,7 +86,7 @@
 
     i {
         color: $primary;
-        font-size: clamp(80px, 5vw, 120px);
+        font-size: clamp(40px, 2.5vw, 120px);
         text-shadow: 0 0 10px $primary;
     }
 }
