@@ -6,8 +6,8 @@
 
 .section {
     margin-left: clamp(540px, 45vw, 1200px);
-    width: clamp(542px, 55vw, 1200px);
     height: 100vh;
+    width: clamp(542px, 55vw, 1200px);    
     padding-right: 0;
     position: relative;
     display: flex;
@@ -40,7 +40,7 @@
 }
 
 .title--about {
-    @include k.about(a-title, 1s, 5s, 1);
+    // @include k.about(a-title, 1s, 5s, 1);
 }
 
 .whoami {
@@ -61,11 +61,11 @@
         font-size: 3.5rem;
         margin-bottom: 20px;
         color: $primary;
-        @include k.about(a-whoami, .5s, 6s, 1);
+        // @include k.about(a-whoami, .5s, 6s, 1);
     }
 
     p {
-        @include k.about(a-whoami, .5s, 6.4s, 1);
+        // @include k.about(a-whoami, .5s, 6.4s, 1);
         line-height: 30px;
         font-size: 1rem;
     }
@@ -90,7 +90,7 @@
 .bio__img {
     width: clamp(200px, 35%, 1200px);
     position: relative;
-    @include k.about(a-info, .5s, 7s, 1);
+    // @include k.about(a-info, .5s, 7s, 1);
 
     &:before,
     &:after {
@@ -130,7 +130,7 @@
     justify-content: space-around;
     position: relative;
     filter: opacity(0);
-    @include k.about(a-info, .5s, 7s, 1);
+    // @include k.about(a-info, .5s, 7s, 1);
 }
 
 .bio__item {
@@ -169,20 +169,20 @@
     justify-content: space-around;
     align-items: center;
     border: 20px solid $primary;
-    border-radius: 15%;
+    border-radius: 15px;
     border-top: 50px solid transparent;
     border-bottom:70px solid transparent;
     background: #20202f;
     box-shadow: 0 0px 4px $primary;
 
-    @include k.about(a-whoami, .7s, 8s, 1);
+    // @include k.about(a-whoami, .7s, 8s, 1);
 
     &:nth-child(2) {
-        @include k.about(a-whoami, .7s, 8.2s, 1);
+        // @include k.about(a-whoami, .7s, 8.2s, 1);
     }
 
     &:nth-child(3) {
-        @include k.about(a-whoami, .7s, 8.5s, 1);
+        // @include k.about(a-whoami, .7s, 8.5s, 1);
 
     }
 
@@ -208,5 +208,6 @@
 
     p {
         margin: 10px 0;
-    }
+    }    
+   
 }
