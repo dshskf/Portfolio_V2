@@ -1,0 +1,35 @@
+.section--contact {
+  background: #232533;
+  justify-content: center;
+}
+
+.sc-title {
+  color: #fca311;
+  margin-bottom: 100px;
+}
+
+.sc-content {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sc-item {
+  text-align: center;
+  width: 40%;
+  margin: 5vh 20px;
+}
+.sc-item i {
+  color: #fca311;
+  text-shadow: 0 0 4px #fca311;
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+.sc-item p {
+  color: white;
+}
+
+/*# sourceMappingURL=contact.css.map */

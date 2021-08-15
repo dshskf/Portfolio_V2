@@ -227,45 +227,139 @@ $('.card').click(function (e) {
 
 
 
-     <div class="section section--experience">
-        <div class="se-title">
-            <img src="/IMG/bca.png">
-            <h1>Bank Central Asia</h1>
-            <h2>RPA Developer</h2>
-            <p>February 2021 ~ October 2021</p>
-        </div>
-        <div class="se-content">
-            <div class="se-content-box">
-                <div class="se-content-item">
-                    <label>Project</label>
-                    <div>
-                        <p>&#8226 GLOB</p>
-                    </div>
+    <div class="se-content">
+                <div class="se-title">
+                    <img src="/IMG/bca.png">
+                    <h1>Bank Central Asia</h1>
+                    <h2>RPA Developer</h2>
+                    <p>February 2021 ~ October 2021</p>
                 </div>
-                <div class="se-content-item">
-                    <label>Responsibility</label>
-                    <div>
-                        <p>&#8226 Automate Task</p>
-                        <p>&#8226 Excel Macro</p>
-                        <p>&#8226 Testing</p>
-                        <p>&#8226 Enhancing</p>
-                    </div>
-                </div>
-                <div class="se-content-item">
-                    <label>Technology</label>
-                    <div>
-                        <p>&#8226 Excel</p>
-                        <p>&#8226 UIPath</p>
-                        <p>&#8226 WinSCP</p>
-                        <p>&#8226 SAP</p>
+                <div class="se-detail">
+                    <div class="se-detail-box">
+                        <div class="se-detail-item">
+                            <label>Project</label>
+                            <div>
+                                <p>&#8226 GLOB</p>
+                            </div>
+                        </div>
+                        <div class="se-detail-item">
+                            <label>Responsibility</label>
+                            <div>
+                                <p>&#8226 Automate Task</p>
+                                <p>&#8226 Excel Macro</p>
+                                <p>&#8226 Testing</p>
+                                <p>&#8226 Enhancing</p>
+                            </div>
+                        </div>
+                        <div class="se-detail-item">
+                            <label>Technology</label>
+                            <div>
+                                <p>&#8226 Excel</p>
+                                <p>&#8226 UIPath</p>
+                                <p>&#8226 WinSCP</p>
+                                <p>&#8226 SAP</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="se-footer">
-            <img src="IMG/tbig.png" class="activated">
-            <img src="IMG/enseval.png">
-            <img src="IMG/idstar.jpg">
-            <img src="IMG/bca.png">
-        </div>
-    </div>
+
+            <div class="se-footer">
+                <img src="IMG/tbig.png" class="activated">
+                <img src="IMG/enseval.png">
+                <img src="IMG/idstar.jpg">
+                <img src="IMG/bca.png">
+            </div>
+
+
+
+
+            .se-title {
+  @include flex(center, center, column);
+  width: $width;  
+
+  img {
+    width: 200px;
+  }
+
+  h1 {
+    color: #005caa;
+    margin: 20px 0 5px 0;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    color: $text;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $text;
+  }
+}
+
+.se-content{
+    width: 100%;
+    @include flex();    
+    margin-top: 10%;
+}
+
+.se-detail {
+  width: 35%;
+  background: $primary;
+  border-radius: $radius;
+  position: relative;
+  padding: 15px;
+  box-shadow: 0 0 4px $primary;
+}
+
+.se-detail-item {
+  margin: 20px 0;
+  color: white;
+
+  label {
+    color: $background;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  div {
+    margin-left: 5px;
+
+    p {
+      margin: 10px 0;
+    }
+  }
+}
+
+.se-footer {
+  width: $width;
+  margin-top: 20px;
+  @include flex();
+
+  img {
+    width: 70px;
+    margin: 0 40px;
+    filter: saturate(0);
+  }
+
+  .activated {
+    filter: saturate(1);
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 300px;
+      height: 300px;
+      background: red;
+    }
+  }
+}

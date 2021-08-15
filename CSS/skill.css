@@ -49,7 +49,7 @@
   height: 40px;
   cursor: pointer;
   background: #1c1f2e;
-  border-radius: 6px;
+  border-radius: 20px;
   color: #fca311;
 }
 .sn-btn i {
@@ -73,7 +73,7 @@
 .progress-bar {
   width: 70%;
   height: 20px;
-  border-radius: 6px;
+  border-radius: 20px;
   background: rgba(0, 0, 0, 0.344);
   position: relative;
 }
@@ -82,7 +82,7 @@
   width: 40%;
   height: 100%;
   background: linear-gradient(90deg, #fca311, #ff5800);
-  border-radius: 6px;
+  border-radius: 20px;
   position: absolute;
 }
 .progress-bar:after {

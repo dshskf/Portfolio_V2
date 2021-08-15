@@ -2,7 +2,7 @@
 @use 'default'as *;
 
 .section--education {
-  background: $light-background;
+  
 }
 
 .education-title {
@@ -51,7 +51,7 @@
   height: 120px;
   overflow: hidden;
   border-radius: $radius;
-  background: $background;
+  background: $light-background;
   margin: 20px 0;
   border: 20px solid $primary;
   border-top: 20px solid transparent;
@@ -92,6 +92,5 @@
   font-weight: bold;
   font-size: 1.5rem;
   position: relative;
-  background: $background;
   padding: 20px;
 }

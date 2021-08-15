@@ -2,11 +2,11 @@ feather.replace()
 $(document).ready(function () {
     (() => {
         setTimeout(() => {
-            $('.section--welcome').hide()
+            $('.section--welcome').hide()            
         }, 0)
     })()
 
-    
+
 
     let isFocus = false,
         countPage = 1

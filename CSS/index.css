@@ -17,12 +17,11 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
   background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #fca311;
   border-radius: 8px;
 }
 
@@ -32,45 +31,99 @@ body {
   overflow-x: hidden;
   padding: 0;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-bg {
+  position: absolute;
+  background: #fca311;
+  width: 120vw;
+  height: 100vh;
+  top: 0;
+  left: -20vw;
+  z-index: -1;
 }
 
 .main-panel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: clamp(500px, 45vw, 1200px);
+  position: relative;
+  width: 80vw;
   height: 100%;
   padding-left: 30px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/IMG/car.jpg);
   background-position: center;
   background-size: cover;
-  overflow: hidden;
   background: #fca311;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.main-panel img {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
+
+.mp-navbar {
+  width: 50%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.mp-navbar p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.mp-content {
+  height: 70%;
   width: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mp-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.mp-title h1 {
+  color: #232533;
+  font-size: clamp(3rem, 4.5vw, 4rem);
+}
+.mp-title p {
+  color: white;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: bold;
+}
+.mp-title::before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 180%;
+  left: -20%;
+  border-radius: 20%;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #232533;
+  border-right: 10px solid #232533;
 }
 
 .mp-bg img {
   filter: grayscale(1);
-}
-
-.mp-content {
-  margin-top: 40vh;
-  color: white;
-}
-.mp-content h1 {
-  font-size: clamp(3rem, 4.5vw, 4rem);
-}
-.mp-content p {
-  color: #fca311;
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: bold;
+  position: relative;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 500px;
 }
 
 .mp-btn {
@@ -86,12 +139,9 @@ body {
   justify-content: center;
   padding: 10px 15px;
   margin-right: 20px;
-  background: #fca311;
+  background: #232533;
   border-radius: 4px;
   cursor: pointer;
-}
-.mp-btn > div:nth-child(1) {
-  border: 2px solid white;
 }
 .mp-btn > div:nth-child(2) {
   background: transparent;
@@ -101,9 +151,8 @@ body {
   color: white;
   text-decoration: none;
 }
-
-.f-icon {
-  font-size: 25px;
+.mp-btn > div i {
+  font-size: 20px;
   margin-right: 10px;
   color: white;
 }
@@ -118,29 +167,10 @@ body {
 .mp-footer * {
   cursor: pointer;
 }
-
-.section--welcome {
-  width: 55vw;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section--welcome h1 {
-  font-size: 3rem;
-  color: #4d4d4d;
-}
-
-.bounce-dot {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 50%;
-}
-.bounce-dot div {
-  width: 40px;
-  height: 40px;
-  background: #fca311;
+.mp-footer i {
+  font-size: 25px;
+  margin-right: 10px;
+  color: white;
 }
 
 /*# sourceMappingURL=index.css.map */

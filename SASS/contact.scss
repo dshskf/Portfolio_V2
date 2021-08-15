@@ -1,0 +1,32 @@
+@use 'color'as *;
+@use 'default'as *;
+
+.section--contact {
+  background: $background;
+  justify-content: center;
+}
+
+.sc-title {
+  color: $primary;
+  margin-bottom: 100px;
+}
+
+.sc-content {
+  width: 70%;
+  @include flex();
+}
+
+.sc-item {
+  text-align: center;
+  width: 40%;
+  margin: 5vh 20px;
+  i {
+    color: $primary;
+    text-shadow: 0 0 4px $primary;
+    font-size: 5rem;
+    margin-bottom: 20px;
+  }
+  p{
+      color:$text;
+  }
+}

@@ -1,184 +1,178 @@
 @use 'keyframes'as *;
 @use 'color'as *;
+@use 'default'as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    padding: 0;
-    font-family: 'Lato', sans-serif;
-    background: $background;
-    overflow-x: hidden;
-    -webkit-transform:translate3d(0,0,0);
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  background: $background;
+  overflow-x: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-    background: transparent;    
+  width: 0px;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $primary;
-    border-radius: 8px;
+  // background: $primary;
+  border-radius: 8px;
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    padding: 0;
-    position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  padding: 0;
+  position: relative;
+  @include flex();
 }
 
-.main-panel {    
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: clamp(500px, 45vw, 1200px);
-    height: 100%;
-    padding-left: 30px;
-    background: linear-gradient($smoke, $smoke), url(/IMG/car.jpg);
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-    background: $primary;
-//    box-shadow: 0 0 10px 3px $text;    
-
-    img {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+.main-bg {
+  position: absolute;
+  background: $primary;
+  width: 120vw;
+  height: 100vh;
+  top: 0;
+  left: -20vw;
+  z-index: -1;
 }
 
-.mp-bg{
-    img{
-        filter: grayscale(1);
-    }
+.main-panel {
+  position: relative;
+  width: 80vw;
+  height: 100%;
+  padding-left: 30px;
+  background-position: center;
+  background-size: cover;
+  background: $primary;
+  @include flex(center, flex-start, column);
+}
+
+.mp-navbar {
+  width: 50%;
+  height: 15%;
+  @include flex(center, space-around);
+
+  p {
+    color: white;
+    font-size: 1.2rem;
+  }
 }
 
 .mp-content {
-    margin-top: 40vh;
-    color: white;
+  height: 70%;
+  width: 100%;
+  @include flex();
+}
 
-    h1 {
-        font-size: clamp(3rem, 4.5vw, 4rem);
-        // @include main();
-    }
+.mp-title {
+  position: relative;
+  @include flex(center, center, column);
 
-    p {
-        color: $primary;
-        font-size: clamp(2rem, 3vw, 3rem);
-        font-weight: bold;
-        // @include main(title, 2s, .2s);
-    }
+  h1 {
+    color: $background;
+    font-size: clamp(3rem, 4.5vw, 4rem);
+    // @include main();
+  }
+
+  p {
+    color: $text;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: bold;
+    // @include main(title, 2s, .2s);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 140%;
+    height: 180%;
+    left: -20%;
+    border-radius: 20%;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid $background;
+    border-right: 10px solid $background;
+  }
+}
+
+.mp-bg {
+  img {
+    filter: grayscale(1);
+    position: relative;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 500px;
+  }
 }
 
 .mp-btn {
-    margin: 40px 0;
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+
+  > div {
+    width: max-content;
+    height: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    margin-right: 20px;
+    background: $background;
+    border-radius: 4px;
+    cursor: pointer;
 
-    > div {
-        width: max-content;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 15px;
-        margin-right: 20px;
-        background: $primary;
-        border-radius: 4px;
-        cursor: pointer;
-        // @include main(button, 1s, 2s);
-
-        &:nth-child(1) {
-            border: 2px solid $text;
-        }
-        
-        &:nth-child(2) {
-            background: transparent;
-            border: 1px solid white;
-            // @include main(button, 1s, 2.3s);
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-        }
+    &:nth-child(1) {
     }
-}
 
-.f-icon {
-    font-size: 25px;
-    margin-right: 10px;
-    color: white;
+    &:nth-child(2) {
+      background: transparent;
+      border: 1px solid white;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    i {
+      font-size: 20px;
+      margin-right: 10px;
+      color: white;
+    }
+  }
 }
 
 .mp-footer {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    // @include main(footer, .5s, 3.2s);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  // @include main(footer, .5s, 3.2s);
 
-    * {
-        cursor: pointer;
-    }
-}
+  * {
+    cursor: pointer;
+  }
 
-
-// WELCOME
-
-.section--welcome {
-    width: 55vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    // @include welcome(rotate, 1.5s, 8s);
-
-    h1 {
-        font-size: 3rem;
-        color: $grey-text;
-    }
-}
-
-.bounce-dot {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
-
-    div {
-        width: 40px;
-        height: 40px;
-        background: $primary;
-        // @include welcome();
-
-        &:nth-child(2) {
-            // @include welcome(bounce, .75s, .25s);
-        }
-
-        &:nth-child(3) {
-            // @include welcome(bounce, .75s, .5s);
-        }
-
-        &:nth-child(4) {
-            // @include welcome(bounce, .75s, .75s);
-        }
-    }
+  i {
+    font-size: 25px;
+    margin-right: 10px;
+    color: white;
+  }
 }
