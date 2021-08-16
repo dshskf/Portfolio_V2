@@ -12,6 +12,17 @@
   flex-wrap: nowrap;
 }
 
+.sticker {
+  position: absolute;
+  z-index: -1;
+}
+
+.astronaut {
+  width: 70%;
+  right: -32%;
+  bottom: 0%;
+}
+
 .title {
   width: 100px;
   height: 60px;
@@ -112,6 +123,7 @@
   align-items: center;
   justify-content: space-around;
   position: relative;
+  border-radius: 8px;
   background: #2d3043;
 }
 

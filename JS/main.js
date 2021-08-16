@@ -1,9 +1,10 @@
-feather.replace()
 $(document).ready(function () {
     (() => {
-        setTimeout(() => {
-            $('.section--welcome').hide()            
-        }, 0)
+        var c = document.getElementById("education");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#fca311"
+        ctx.font = "80px sans-serif";
+        ctx.fillText("Hello World", 10, 50);
     })()
 
 
@@ -17,6 +18,7 @@ $(document).ready(function () {
         console.log(window.innerHeight)
 
     })
+
 })
 
 

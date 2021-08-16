@@ -38,6 +38,13 @@ body {
   flex-wrap: wrap;
 }
 
+.bg-pattern {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
 .main-bg {
   position: absolute;
   background: #fca311;
@@ -103,18 +110,6 @@ body {
   color: white;
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: bold;
-}
-.mp-title::before {
-  content: "";
-  position: absolute;
-  width: 140%;
-  height: 180%;
-  left: -20%;
-  border-radius: 20%;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid #232533;
-  border-right: 10px solid #232533;
 }
 
 .mp-bg img {

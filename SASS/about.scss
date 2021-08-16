@@ -12,6 +12,17 @@
   @include flex(center, center, column, nowrap);
 }
 
+.sticker {
+  position: absolute;
+  z-index: -1;
+}
+
+.astronaut {
+  width: 70%;
+  right: -32%;
+  bottom: 0%;
+}
+
 .title {
   width: 100px;
   height: 60px;
@@ -36,7 +47,6 @@
 }
 
 .title--about {
-  
 }
 
 .whoami {
@@ -54,10 +64,10 @@
     text-align: center;
     font-size: 3.5rem;
     margin-bottom: 20px;
-    color: $primary;    
+    color: $primary;
   }
 
-  p {    
+  p {
     line-height: 30px;
     font-size: 1rem;
   }
@@ -120,6 +130,7 @@
   align-items: center;
   justify-content: space-around;
   position: relative;
+  border-radius:8px;
   background: $light-background;
 }
 
@@ -139,14 +150,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center; 
+  align-items: center;
 
-  &:nth-child(2) {      
-    
+  &:nth-child(2) {
   }
 
   &:nth-child(3) {
-      border:none;    
+    border: none;
   }
 
   > i {
