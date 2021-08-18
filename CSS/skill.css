@@ -1,5 +1,18 @@
 .section--skills {
   justify-content: center;
+  background: #2d3043;
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: -15vw;
+  z-index: -1;
+}
+
+.bg-skills {
+  background: #2d3043;
 }
 
 .skills-title {

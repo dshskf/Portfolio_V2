@@ -1,8 +1,20 @@
 @use 'color'as *;
 @use 'default'as *;
 
-.section--skills {  
-  justify-content: center;
+.section--skills {
+  justify-content: center;background: $light-background;  
+}
+
+.bg {
+  width: 100vw;
+  height:100vh;
+  position: absolute;
+  left: -15vw;
+  z-index: -1;
+}
+
+.bg-skills {
+  background: $light-background;
 }
 
 .skills-title {
@@ -43,8 +55,8 @@
   border-radius: $radius;
   color: $primary;
 
-  i{
-      font-size: 1.5rem;
+  i {
+    font-size: 1.5rem;
   }
 }
 

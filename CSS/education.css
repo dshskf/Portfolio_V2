@@ -8,60 +8,49 @@
   z-index: -1;
 }
 
-.cable {
+.astronaut-edu {
+  width: 90px;
+  left: 16%;
+  top: 2px;
+  transform: rotate(-10deg);
+}
+
+.cable-left {
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
 }
-.cable::before {
+.cable-left::before {
   content: "";
   position: absolute;
   width: 20px;
   height: 79%;
   background: #fca311;
   top: 10.6%;
-  left: 10%;
+  left: 17%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-.cable::after {
-  content: "";
-  position: absolute;
-  width: 30vw;
-  height: 20px;
-  background: #fca311;
-  left: -24vw;
-  top: 47%;
-}
 
-.right {
+.cable-right {
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
 }
-.right::before {
+.cable-right::before {
   content: "";
   position: absolute;
   width: 20px;
   height: 79%;
   background: #fca311;
   top: 10.6%;
-  right: 10%;
+  right: 17%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-}
-.right::after {
-  content: "";
-  position: absolute;
-  width: 30vw;
-  height: 20px;
-  background: #fca311;
-  right: -24vw;
-  top: 47%;
 }
 
 .education-title {
@@ -118,20 +107,21 @@
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   position: relative;
+  box-shadow: 0 0 4px #fca311;
 }
 .education-item::before, .education-item::after {
   content: "";
-  width: 25%;
+  width: 10%;
   height: 25px;
   background: #fca311;
   position: absolute;
   top: 35%;
 }
 .education-item::before {
-  left: -25%;
+  left: -12%;
 }
 .education-item::after {
-  right: -25%;
+  right: -12%;
 }
 
 .ei-title {

@@ -1,3 +1,4 @@
+@use 'color'as *;
 $radius: 20px;
 
 @mixin flex($align: center, $justify: center, $dir: row, $wrap: wrap) {
@@ -7,3 +8,4 @@ $radius: 20px;
   align-items: $align;
   flex-wrap: $wrap;
 }
+

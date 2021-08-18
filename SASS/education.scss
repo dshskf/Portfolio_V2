@@ -1,7 +1,7 @@
 @use 'color'as *;
 @use 'default'as *;
 
-.section--education {
+.section--education {  
   canvas {
     width: 100vw;
     height: 90%;
@@ -13,39 +13,47 @@
   }
 }
 
-.cable {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 79%;
-    background: $primary;
-    top: 10.6%;
-    left: 10%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 30vw;
-    height: 20px;
-    background: $primary;
-    left: -24vw;
-    top: 47%;
-  }
-
-  
+.astronaut-edu {
+  width: 90px;
+  left: 16%;
+  top: 2px;
+  transform: rotate(-10deg);
 }
 
-.right {
+.cable-left {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 79%;
+    background: $primary;
+    top: 10.6%;
+    left: 17%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    // box-shadow: 0 0 8px $primary;
+  }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: clamp(200px, 40vw, 730px);
+  //   height: 20px;
+  //   background: $primary;
+  //   border-radius: 4px;
+  //   left: -33vw;
+  //   top: 47%;
+  //   box-shadow: 0 0 8px $primary;
+  // }
+}
+
+.cable-right {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -58,20 +66,23 @@
     height: 79%;
     background: $primary;
     top: 10.6%;
-    right: 10%;
+    right: 17%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    // box-shadow: 0 0 8px $primary;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 30vw;
-    height: 20px;
-    background: $primary;
-    right: -24vw;
-    top: 47%;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: clamp(200px, 40vw, 730px);
+  //   height: 20px;
+  //   background: $primary;
+  //   border-radius: 4px;
+  //   right: -33vw;
+  //   top: 47%;
+  //   box-shadow: 0 0 8px $primary;
+  // }
 }
 
 .education-title {
@@ -127,22 +138,24 @@
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   position: relative;
+  box-shadow: 0 0 4px $primary;
 
   &::before,
   &::after {
     content: "";
-    width: 25%;
+    width: 10%;
     height: 25px;
     background: $primary;
     position: absolute;
     top: 35%;
+    // box-shadow: 0 0 8px $primary;
   }
 
   &::before {
-    left: -25%;
+    left: -12%;
   }
   &::after {
-    right: -25%;
+    right: -12%;
   }
 }
 

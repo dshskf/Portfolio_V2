@@ -3,7 +3,8 @@
 
 $width: 45%;
 
-.section--experience {  
+.section--experience {
+  height: 80vh;
   // background: linear-gradient($background 50%, $dark-background);
   position: relative;
 }
@@ -14,7 +15,7 @@ $width: 45%;
     color: $primary;
     font-size: 3rem;
     z-index: 1;
-    border-bottom: 2px solid $text;
+    border-bottom: 4px solid $text;
     padding-bottom: 10px;
   }
 }
@@ -31,7 +32,7 @@ $width: 45%;
   background: $primary;
   border: 2px solid $primary;
   box-shadow: 0 0 4px $primary;
-  border-radius: 10%;
+  border-radius: 14px;
   margin: 20px;
   cursor: pointer;
   transition: all 0.3s;
@@ -53,13 +54,14 @@ $width: 45%;
 .ec-content {
   width: 100%;
   height: 85%;
-  border-radius: 10%;
+  border-radius: 14px;
   background: $light-background;
   overflow: hidden;
 
   @include flex(center, center, column);
   img {
     width: 60%;
+    filter: grayscale(1);
   }
 
   h1 {
