@@ -7,7 +7,7 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  left: -15vw;
+  left: -22vw;
   z-index: -1;
 }
 
@@ -42,6 +42,21 @@
   align-items: center;
 }
 
+.radioactive {
+  width: 100px;
+  left: 30%;
+  top: 100px;
+  z-index: 1;
+}
+
+.astronaut-skills {
+  width: 60px;
+  left: 32%;
+  top: -50px;
+  transform: rotate(10deg) rotateY(180deg);
+  z-index: 1;
+}
+
 .skills-nav {
   display: flex;
   flex-direction: row;
@@ -64,9 +79,23 @@
   background: #1c1f2e;
   border-radius: 20px;
   color: #fca311;
+  position: relative;
+  z-index: 1;
+}
+.sn-btn:nth-child(1) {
+  background: white;
 }
 .sn-btn i {
   font-size: 1.5rem;
+}
+
+.sc-bg {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background: #fca311;
+  left: 15%;
+  top: 0;
 }
 
 .sc-progress {
@@ -76,10 +105,11 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  z-index: 1;
 }
 .sc-progress p {
   font-size: 1.4rem;
-  color: #fca311;
+  color: white;
   margin: 15px 0;
 }
 

@@ -4,6 +4,12 @@
   justify-content: center;
 }
 
+.astronaut-contact {
+  width: 200px;
+  bottom: 0;
+  z-index: 1;
+}
+
 .sc-title {
   color: white;
   margin-bottom: 80px;
@@ -44,11 +50,11 @@
   margin: 5vh 20px;
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid #fca311;
+  border: 1px solid white;
   cursor: pointer;
 }
 .sc-item i {
-  color: #fca311;
+  color: white;
   font-size: 1.4rem;
 }
 .sc-item p {

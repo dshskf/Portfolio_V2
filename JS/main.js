@@ -1,34 +1,45 @@
 $(document).ready(function () {
     (() => {
-        $('.about-skill').trigger('click');
-        let c = document.getElementById("education"),
-            cWidth = c.getBoundingClientRect().width,
-            cHeight = c.getBoundingClientRect().height
+        // $('.about-skill').trigger('click');
+        // let c = document.getElementById("education"),
+        //     cWidth = c.getBoundingClientRect().width,
+        //     cHeight = c.getBoundingClientRect().height
 
-        c.width = cWidth;
-        c.height = cHeight;
+        // c.width = cWidth;
+        // c.height = cHeight;
 
-        var ctx = c.getContext("2d");
-        ctx.font = "40px sans-serif";
-        let charData = ['◻', '△', 'O', 'X'],
-            colorData = ['#CE9EC1', '#76C6B2', '#E85636', '#919FCC']
+        // var ctx = c.getContext("2d");
+        // ctx.font = "40px sans-serif";
+        // let charData = ['◻', '△', 'O', 'X'],
+        //     colorData = ['#CE9EC1', '#76C6B2', '#E85636', '#919FCC']
 
-        for (let i = 0; i < 10; i++) {
-            let random_w = Math.random() * cWidth,
-                random_h = Math.random() * cHeight,
-                shuffle = Math.floor(Math.random() * 3)
-            ctx.beginPath();
-            ctx.lineWidth = "4";
-            ctx.strokeStyle = '#ffffff';
-            // ctx.fillText(String.fromCharCode(Math.floor((Math.random() + (Math.random() * 100)) * 120)), random_w, random_h);
-            ctx.arc(random_w, random_h, 1, 0, 2 * Math.PI, false);
-            ctx.shadowBlur = 8;
-            ctx.shadowColor = '#ffffff';
-            // ctx.fillStyle = this.color;
-            ctx.fillStyle = colorData[shuffle]
-            // ctx.fillText(charData[shuffle], random_w, random_h);
-            ctx.stroke();
-        }
+        // for (let i = 0; i < 10; i++) {
+        //     let random_w = Math.random() * cWidth,
+        //         random_h = Math.random() * cHeight,
+        //         shuffle = Math.floor(Math.random() * 3)
+        //     ctx.beginPath();
+        //     ctx.lineWidth = "4";
+        //     ctx.strokeStyle = '#ffffff';
+        //     // ctx.fillText(String.fromCharCode(Math.floor((Math.random() + (Math.random() * 100)) * 120)), random_w, random_h);
+        //     ctx.arc(random_w, random_h, 1, 0, 2 * Math.PI, false);
+        //     ctx.shadowBlur = 8;
+        //     ctx.shadowColor = '#ffffff';
+        //     // ctx.fillStyle = this.color;
+        //     ctx.fillStyle = colorData[shuffle]
+        //     // ctx.fillText(charData[shuffle], random_w, random_h);
+        //     ctx.stroke();
+        // }
+
+        let text = " makan  "
+        text = text.split(" ").map(chars => {
+            if (chars === ' ') {
+                console.log("Space")
+                return
+            }
+            console.log(chars);
+        })
+
+        console.log(text.join(" ").replaceAll(' ', '-'));
 
 
 

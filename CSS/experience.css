@@ -1,5 +1,4 @@
 .section--experience {
-  height: 80vh;
   position: relative;
 }
 
@@ -29,7 +28,7 @@
   height: 300px;
   background: #fca311;
   border: 2px solid #fca311;
-  box-shadow: 0 0 4px #fca311;
+  padding: 1px;
   border-radius: 14px;
   margin: 20px;
   cursor: pointer;
@@ -46,9 +45,11 @@
   font-size: 2.5rem;
 }
 .exp-card:hover {
-  background: white;
-  border: 2px solid white;
-  box-shadow: 0 0 4px white;
+  background: #2d3043;
+  border: 2px solid #fca311;
+}
+.exp-card:hover i {
+  color: #fca311;
 }
 
 .ec-content {
