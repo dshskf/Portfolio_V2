@@ -59,7 +59,6 @@ body {
   position: relative;
   width: 80vw;
   height: 100%;
-  padding-left: 30px;
   background-position: center;
   background-size: cover;
   background: #fca311;
@@ -108,7 +107,7 @@ body {
 }
 .mp-title p {
   color: white;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1.5rem, 2vw, 3rem);
   font-weight: bold;
 }
 

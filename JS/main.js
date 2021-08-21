@@ -29,20 +29,6 @@ $(document).ready(function () {
         //     // ctx.fillText(charData[shuffle], random_w, random_h);
         //     ctx.stroke();
         // }
-
-        let text = " makan  "
-        text = text.split(" ").map(chars => {
-            if (chars === ' ') {
-                console.log("Space")
-                return
-            }
-            console.log(chars);
-        })
-
-        console.log(text.join(" ").replaceAll(' ', '-'));
-
-
-
     })()
 
 
@@ -54,11 +40,6 @@ $(document).ready(function () {
         let position = e.target.scrollTop
 
     })
-
-    $('.about-skill').click(function () {
-        alert('hello')
-    })
-
 })
 
 

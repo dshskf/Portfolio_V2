@@ -10,7 +10,7 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  left: -22vw;
+  // left: -15vw;
   z-index: -1;
 }
 
@@ -41,47 +41,6 @@
   align-items: center;
 }
 
-.radioactive {
-  width: 100px;
-  left:30%;
-  top: 100px;
-  z-index: 1;
-}
-
-.astronaut-skills {
-  width: 60px;
-  left: 32%;
-  top: -50px;
-  transform: rotate(10deg) rotateY(180deg);
-  z-index: 1;
-}
-
-.skills-nav {
-  @include flex(center, space-between);
-  margin-top: 80px;
-  width: 60%;
-}
-
-.sn-btn {
-  @include flex(center, space-around);
-  width: 120px;
-  height: 40px;
-  cursor: pointer;
-  background: $dark-background;
-  border-radius: $radius;
-  color: $primary;
-  position: relative;
-  z-index: 1;
-
-  &:nth-child(1) {
-    background: $text;
-  }
-
-  i {
-    font-size: 1.5rem;
-  }
-}
-
 .sc-bg {
   position: absolute;
   width: 20%;
@@ -100,6 +59,7 @@
     font-size: 1.4rem;
     color: $text;
     margin: 15px 0;
+    z-index: 1;
   }
 }
 
@@ -139,5 +99,39 @@
     right: 4%;
     top: 3px;
     margin: 0;
+  }
+}
+
+.astronaut-skills {
+  width: 60px;
+  left: 32%;
+  top: -50px;
+  transform: rotate(10deg) rotateY(180deg);
+  z-index: 1;
+}
+
+.skills-nav {
+  @include flex(center, space-between);
+  margin-top: 80px;
+  width: 60%;
+}
+
+.sn-btn {
+  @include flex(center, space-around);
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  background: $dark-background;
+  border-radius: $radius;
+  color: $primary;
+  position: relative;
+  z-index: 1;
+
+  &:nth-child(1) {
+    background: $text;
+  }
+
+  i {
+    font-size: 1.5rem;
   }
 }

@@ -1,108 +1,193 @@
 @media only screen and (max-width: 1280px) {
-  /*  ABOUT US  */
-}
-@media only screen and (max-width: 1048px) {
+  /*  Main Panel  */
   .main-panel {
-    position: relative;
-    height: 700px;
+    width: 90vw;
+  }
+
+  .mp-navbar {
+    width: 60%;
+  }
+
+  .se-content {
     width: 100%;
-    padding: 0;
-  }
-
-  .whoami {
-    margin-bottom: 30px;
-  }
-
-  .mp-content {
-    margin-top: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /*  ABOUT US  */
-  .section {
-    margin-left: 0;
-    width: 100vw;
-  }
-
-  .about-bg {
-    width: 100%;
-    height: 250px;
-    border-radius: 0;
-  }
-
-  .bio {
-    width: 80%;
-    justify-content: space-around;
-    padding: 0;
-  }
-
-  .about-card {
-    width: clamp(150px, 25%, 300px);
-  }
-
-  .bio__data {
-    width: clamp(300px, 50%, 900px);
-    padding-left: 60px;
   }
 }
-@media only screen and (max-width: 658px) {
-  /*  ABOUT US  */
-  .bio__img {
-    width: clamp(200px, 90%, 1200px);
+@media only screen and (max-width: 1024px) {
+  /*  Main Panel  */
+  .main-panel,
+.main-bg {
+    height: 70vh;
   }
 
-  .bio__data {
-    width: 100%;
-    justify-content: space-around;
-    padding: 0;
+  .mp-navbar {
+    width: 80%;
   }
 
-  .whoami h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin: 40px 0;
+  .section {
+    width: 80vw;
+  }
+
+  .sc-progress {
+    width: 80%;
+  }
+
+  .sc-bg {
+    left: 8%;
+  }
+}
+@media only screen and (max-width: 770px) {
+  /*  Main Panel  */
+  .main-panel,
+.main-bg {
+    height: 60vh;
+  }
+
+  .mp-navbar {
+    width: 80%;
+  }
+  .mp-navbar p {
+    font-size: 1rem;
+  }
+
+  .section {
+    width: 90vw;
+  }
+
+  .section--about {
+    height: auto;
   }
 
   .about-skill {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/IMG/car.jpg) no-repeat fixed center;
-    background-size: cover;
     height: 200px;
-    padding: 0;
+  }
+
+  .whoami p {
+    font-size: 14px;
+  }
+  .whoami p b {
+    font-size: 1rem;
+  }
+
+  .bio {
+    margin-top: 70px;
+  }
+
+  .bio__data {
     width: 100%;
   }
 
-  .about-card {
-    height: 100%;
-    border: none;
-    justify-content: center;
-    border: none;
-    box-shadow: none;
+  .bio__item {
+    margin: 20px 0;
+    text-align: center;
   }
-  .about-card > .f-icon *,
-.about-card h1 {
-    color: white;
+  .bio__item label {
+    font-size: 1rem;
   }
-  .about-card p {
-    display: none;
+  .bio__item p {
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  .section--experience {
+    height: auto;
+  }
+
+  .section--skills,
+.bg-skills {
+    height: 80vh;
+  }
+
+  .skills-nav {
+    width: 90%;
   }
 }
-@media only screen and (max-width: 480px) {
-  /*    Main      */
-  .mp-content h1 {
-    font-size: clamp(2.4rem, 10vw, 3rem);
-    letter-spacing: 1px;
+@media only screen and (max-width: 520px) {
+  .sticker {
+    display: none;
   }
 
-  .mp-btn {
-    flex-direction: column;
+  .main-panel,
+.main-bg {
+    height: 50vh;
   }
+
+  .mp-title h1 {
+    font-size: 2rem;
+  }
+  .mp-title p {
+    font-size: 1.4rem;
+  }
+
   .mp-btn > div {
-    margin: 10px 0;
+    height: 40px;
+    padding: 10px;
+  }
+  .mp-btn > div i {
+    font-size: 12px;
+  }
+  .mp-btn a {
+    font-size: 14px;
   }
 
-  /*  ABOUT US  */
+  .about-skill {
+    width: 100vw;
+    height: auto;
+    padding: 10px 0;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .about-card {
+    width: 100%;
+    height: 200px;
+    border-bottom: 2px solid #fca311;
+    justify-content: center;
+  }
+
+  .education-list {
+    min-width: 0;
+    width: 100vw;
+  }
+
+  .education-item {
+    width: 100%;
+    border-radius: 0;
+    border: 15px solid #fca311;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+  .education-item::before, .education-item::after {
+    display: none;
+  }
+
+  .cable-left,
+.cable-right {
+    display: none;
+  }
+
+  .ei-year {
+    padding: 5px;
+  }
+
+  .sc-bg {
+    display: none;
+  }
+
+  .sc-content p {
+    font-size: 1.1rem;
+  }
+
+  .sc-progress {
+    width: 100%;
+  }
+
+  .sc-item {
+    margin: 10px;
+  }
 }
 
 /*# sourceMappingURL=media.css.map */

@@ -7,7 +7,6 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  left: -22vw;
   z-index: -1;
 }
 
@@ -42,11 +41,65 @@
   align-items: center;
 }
 
-.radioactive {
-  width: 100px;
-  left: 30%;
-  top: 100px;
+.sc-bg {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background: #fca311;
+  left: 15%;
+  top: 0;
+}
+
+.sc-progress {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
   z-index: 1;
+}
+.sc-progress p {
+  font-size: 1.4rem;
+  color: white;
+  margin: 15px 0;
+  z-index: 1;
+}
+
+.progress-bar {
+  width: 70%;
+  height: 20px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.344);
+  position: relative;
+}
+.progress-bar:before {
+  content: "";
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, #fca311, #ff5800);
+  border-radius: 20px;
+  position: absolute;
+}
+.progress-bar:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #ff5800;
+  border-radius: 50%;
+  position: absolute;
+  border: 4px solid white;
+  box-shadow: 0 0 6px 2px white;
+  left: 35%;
+  top: -2px;
+}
+.progress-bar p {
+  position: absolute;
+  color: white;
+  font-size: 0.7rem;
+  right: 4%;
+  top: 3px;
+  margin: 0;
 }
 
 .astronaut-skills {
@@ -87,66 +140,6 @@
 }
 .sn-btn i {
   font-size: 1.5rem;
-}
-
-.sc-bg {
-  position: absolute;
-  width: 20%;
-  height: 100%;
-  background: #fca311;
-  left: 15%;
-  top: 0;
-}
-
-.sc-progress {
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  z-index: 1;
-}
-.sc-progress p {
-  font-size: 1.4rem;
-  color: white;
-  margin: 15px 0;
-}
-
-.progress-bar {
-  width: 70%;
-  height: 20px;
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.344);
-  position: relative;
-}
-.progress-bar:before {
-  content: "";
-  width: 40%;
-  height: 100%;
-  background: linear-gradient(90deg, #fca311, #ff5800);
-  border-radius: 20px;
-  position: absolute;
-}
-.progress-bar:after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background: #ff5800;
-  border-radius: 50%;
-  position: absolute;
-  border: 4px solid white;
-  box-shadow: 0 0 6px 2px white;
-  left: 35%;
-  top: -2px;
-}
-.progress-bar p {
-  position: absolute;
-  color: white;
-  font-size: 0.7rem;
-  right: 4%;
-  top: 3px;
-  margin: 0;
 }
 
 /*# sourceMappingURL=skill.css.map */

@@ -1,120 +1,212 @@
 @use 'color' as *;
+@use 'default'as *;
 
 @media only screen and (max-width: 1280px) {
-  /*  ABOUT US  */
-
-}
-
-@media only screen and (max-width: 1048px) {
+  /*  Main Panel  */
   .main-panel {
-    position: relative;
-    height: 700px;
+    width: 90vw;
+  }
+
+  .mp-navbar {
+    width: 60%;
+  }
+
+  // Experience
+  .se-content {
     width: 100%;
-    padding: 0;
-  }
-
-  .whoami {
-    margin-bottom: 30px;
-  }
-
-  .mp-content {
-    margin-top: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /*  ABOUT US  */
-
-  .section {
-    margin-left: 0;
-    width: 100vw;
-  }
-  .about-bg {
-    width: 100%;
-    height: 250px;
-    border-radius: 0;
-  }
-
-  .bio {
-    width: 80%;
-    justify-content: space-around;
-    padding: 0;
-  }
-
-  .about-card {
-    width: clamp(150px, 25%, 300px);
-  }
-
-  .bio__data {
-    width: clamp(300px, 50%, 900px);
-    padding-left: 60px;
   }
 }
 
-@media only screen and (max-width: 658px) {
-  /*  ABOUT US  */
-
-  .bio__img {
-    width: clamp(200px, 90%, 1200px);
+@media only screen and (max-width: 1024px) {
+  /*  Main Panel  */
+  .main-panel,
+  .main-bg {
+    height: 70vh;
   }
 
-  .bio__data {
-    width: 100%;
-    justify-content: space-around;
-    padding: 0;
+  .mp-navbar {
+    width: 80%;
   }
 
-  .whoami h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin: 40px 0;
+  // About
+  .section {
+    width: 80vw;
+  }
+
+  // Skills
+  .sc-progress {
+    width: 80%;
+  }
+  .sc-bg {
+    left: 8%;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  /*  Main Panel  */
+  .main-panel,
+  .main-bg {
+    height: 60vh;
+  }
+  .mp-navbar {
+    width: 80%;
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  // About
+  .section {
+    width: 90vw;
+  }
+  .section--about {
+    height: auto;
   }
 
   .about-skill {
-    background: linear-gradient(90deg, $smoke, $smoke),
-      url(/IMG/car.jpg) no-repeat fixed center;
-    background-size: cover;
     height: 200px;
-    padding: 0;
+  }
+
+  .whoami {
+    p {
+      font-size: 14px;
+
+      b {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .bio {
+    margin-top: 70px;
+  }
+
+  .bio__data {
     width: 100%;
   }
 
-  .about-card {
-    height: 100%;
-    border: none;
-    justify-content: center;
-    border: none;
-    box-shadow: none;
+  .bio__item {
+    margin: 20px 0;
+    text-align: center;
 
-    > .f-icon *,
-    h1 {
-      color: white;
+    label {
+      font-size: 1rem;
     }
 
     p {
-      display: none;
+      font-size: 14px;
+      margin: 5px;
     }
+  }
+
+  // Experience
+  .section--experience {
+    height: auto;
+  }
+
+  // Skills
+  .section--skills,
+  .bg-skills {
+    height: 80vh;
+  }
+  .skills-nav {
+    width: 90%;
   }
 }
 
-@media only screen and (max-width: 480px) {
-  /*    Main      */
-
-  .mp-content h1 {
-    font-size: clamp(2.4rem, 10vw, 3rem);
-    letter-spacing: 1px;
+@media only screen and (max-width: 520px) {
+  .sticker {
+    display: none;
   }
 
-  .mp-btn {
-    flex-direction: column;
+  .main-panel,
+  .main-bg {
+    height: 50vh;
+  }
 
-    > div {
-      margin: 10px 0;
+  .mp-title {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.4rem;
     }
   }
 
-  /*  ABOUT US  */
+  .mp-btn {
+    > div {
+      height: 40px;
+      padding: 10px;
+
+      i {
+        font-size: 12px;
+      }
+    }
+    a {
+      font-size: 14px;
+    }
+  }
+
+  // About
+  .about-skill {
+    width: 100vw;
+    height: auto;
+    padding: 10px 0;
+    border-radius: 0;
+    @include flex(center, center, column);
+  }
+
   .about-card {
+    width: 100%;
+    height: 200px;
+    border-bottom: 2px solid $primary;
+    justify-content: center;
+  }
+
+  // Education
+  .education-list {
+    min-width: 0;
+    width: 100vw;
+  }
+
+  .education-item {
+    width: 100%;
+    border-radius: 0;
+    border: 15px solid $primary;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .cable-left,
+  .cable-right {
+    display: none;
+  }
+
+  .ei-year {
+    padding: 5px;
+  }
+
+  // Skills
+  .sc-bg {
+    display: none;
+  }
+
+  .sc-content {
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .sc-progress {
+    width: 100%;
+  }
+
+  .sc-item {
+    margin: 10px;
   }
 }

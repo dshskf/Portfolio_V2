@@ -1,7 +1,7 @@
 @use 'color'as *;
 @use 'default'as *;
 
-.section--education {  
+.section--education {
   canvas {
     width: 100vw;
     height: 90%;
@@ -37,7 +37,6 @@
     left: 17%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    // box-shadow: 0 0 8px $primary;
   }
 
   // &::after {
@@ -69,20 +68,7 @@
     right: 17%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    // box-shadow: 0 0 8px $primary;
   }
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   width: clamp(200px, 40vw, 730px);
-  //   height: 20px;
-  //   background: $primary;
-  //   border-radius: 4px;
-  //   right: -33vw;
-  //   top: 47%;
-  //   box-shadow: 0 0 8px $primary;
-  // }
 }
 
 .education-title {
@@ -120,7 +106,7 @@
 
 .education-list {
   width: 100%;
-  min-width: 420px;
+  min-width: 750px;
   position: relative;
   @include flex(center);
 }
@@ -168,12 +154,12 @@
 
   h1 {
     margin: 0 0 10px 0;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 1.5rem);
     color: $primary;
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: clamp(0.8rem, 3vw, 1.1rem);
     color: $text;
   }
 }
