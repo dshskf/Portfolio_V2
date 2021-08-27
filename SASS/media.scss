@@ -15,6 +15,14 @@
   .se-content {
     width: 100%;
   }
+
+  // Skills
+  .sc-progress {
+    width: 85%;
+  }
+  .sc-bg {
+    left: 5%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -31,14 +39,6 @@
   // About
   .section {
     width: 80vw;
-  }
-
-  // Skills
-  .sc-progress {
-    width: 80%;
-  }
-  .sc-bg {
-    left: 8%;
   }
 }
 

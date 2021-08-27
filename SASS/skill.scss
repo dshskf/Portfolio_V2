@@ -19,7 +19,13 @@
 }
 
 .skills-title {
+  height: 10%;
+  z-index: 10;
+  padding:10px;
+  border-radius: $radius;
+  background: $light-background;
   @include flex(center, flex-start);
+
   i {
     font-size: 2rem;
     color: $primary;
@@ -33,12 +39,13 @@
 }
 
 .skills-content {
+  height: 37%;
   margin-top: 40px;
   width: 95%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: column;  
   align-items: center;
+  transition: all 1s;
 }
 
 .sc-bg {
@@ -59,7 +66,8 @@
     font-size: 1.4rem;
     color: $text;
     margin: 15px 0;
-    z-index: 1;
+    text-shadow: 0 0 10px $text;
+    z-index: 1;    
   }
 }
 
@@ -70,7 +78,7 @@
   background: rgba(0, 0, 0, 0.344);
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     width: 40%;
     height: 100%;
@@ -79,17 +87,17 @@
     position: absolute;
   }
 
-  &:after {
+  &::after {
     content: "";
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     background: $orange;
     border-radius: 50%;
     position: absolute;
     border: 4px solid $text;
-    box-shadow: 0 0 6px 2px $text;
+    // box-shadow: 0 0 6px 2px $text;
     left: 35%;
-    top: -2px;
+    top: -5px;
   }
 
   p {
@@ -102,6 +110,18 @@
   }
 }
 
+@for $i from 1 through 14 {
+  .bar-#{$i} {
+    &::before {
+      content: "";
+      width: calc(#{$i} * 7%);
+    }
+    &::after {
+      content: "";
+      left: calc((#{$i} * 7%) - 4%);
+    }
+  }
+}
 .astronaut-skills {
   width: 60px;
   left: 32%;
@@ -111,9 +131,10 @@
 }
 
 .skills-nav {
-  @include flex(center, space-between);
   margin-top: 80px;
   width: 60%;
+  height: 10%;
+  @include flex(center, space-between);  
 }
 
 .sn-btn {

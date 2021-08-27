@@ -1,4 +1,0 @@
-sass --watch SASS/index.scss:CSS/index.css
-sass --watch SASS/about.scss:CSS/about.css
-sass --watch SASS/media.scss:CSS/media.css
-sass --watch SASS:CSS

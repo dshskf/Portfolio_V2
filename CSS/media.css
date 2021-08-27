@@ -11,6 +11,14 @@
   .se-content {
     width: 100%;
   }
+
+  .sc-progress {
+    width: 85%;
+  }
+
+  .sc-bg {
+    left: 5%;
+  }
 }
 @media only screen and (max-width: 1024px) {
   /*  Main Panel  */
@@ -25,14 +33,6 @@
 
   .section {
     width: 80vw;
-  }
-
-  .sc-progress {
-    width: 80%;
-  }
-
-  .sc-bg {
-    left: 8%;
   }
 }
 @media only screen and (max-width: 770px) {

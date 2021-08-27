@@ -10,22 +10,22 @@
     <link rel="stylesheet" href="CSS/experience.css">
     <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" href="CSS/media.css">
+    <link rel="icon" href="http://pngimg.com/uploads/book/book_PNG51090.png">
     <script src="https://kit.fontawesome.com/f4202d1a18.js" crossorigin="anonymous"></script>
     <title>Alexander Kevin</title>
 </head>
 
-<body>    
+<body>
     <div class="container">
-
-        <div class="main-panel">
+        <div id="home" class="main-panel">
             <img class="bg-pattern" src="./IMG/Layer 8.png">
             <div class="main-bg"></div>
             <div class="mp-navbar">
-                <p>Home</p>
-                <p>Education</p>
-                <p>Skills</p>
-                <p>Experience</p>
-                <p>Contact</p>
+                <p class="nav-link">Home</p>
+                <p class="nav-link">About</p>
+                <p class="nav-link">Skills</p>
+                <p class="nav-link">Experience</p>
+                <p class="nav-link">Contact</p>
             </div>
             <div class="mp-content">
                 <div class="mp-title">
@@ -41,11 +41,11 @@
                             <a href="#">WhatsApp</a>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
 
-        <div class="section section--about">
+        <div id="about" class="section section--about">
             <div class="whoami">
                 <h1>Who am <b>I</b>?</h1>
                 <p>I'm a <b>Software Engineer</b> with almost two years of experience developing web and mobile
@@ -117,7 +117,7 @@
             </div>
         </div>
 
-        <div class="section section--education">            
+        <div id="education" class="section section--education">
             <div class="education-content">
                 <div class="education-list">
                     <img class="sticker astronaut-edu" src="./IMG/astronaut-3.svg">
@@ -174,75 +174,33 @@
                 </div>
             </div>
         </div>
-        <div class="section section--skills">
+        <div id="skills" class="section section--skills">
             <div class="bg bg-skills"></div>
             <div class="skills-title">
                 <i class="fas fa-code"></i>
                 <h1>Frontend</h1>
             </div>
-            <div class="skills-content">                
-                <div class="sc-progress">
-                    <div class="sc-bg"></div>
-                    <p>HTML</p>
-                    <div class="progress-bar">
-                        <p>40%</p>
-                    </div>
-                </div>
-                <div class="sc-progress">
-                    <p>CSS</p>
-                    <div class="progress-bar">
-                        <p>40%</p>
-                    </div>
-                </div>
-                <div class="sc-progress">
-                    <p>JS</p>
-                    <div class="progress-bar">
-                        <p>40%</p>
-                    </div>
-                </div>
-                <div class="sc-progress">
-                    <p>SASS</p>
-                    <div class="progress-bar">
-                        <p>40%</p>
-                    </div>
-                </div>
-                <div class="sc-progress">
-                    <p>JQuery</p>
-                    <div class="progress-bar">
-                        <p>40%</p>
-                    </div>
-                </div>
-                <div class="sc-progress">
-                    <p>React</p>
-                    <div class="progress-bar">
-                        <p>40%</p>
-                    </div>
-                </div>
-                <div class="sc-progress">
-                    <p>NextJS</p>
-                    <div class="progress-bar">
-                        <p>40%</p>
-                    </div>
-                </div>
+            <div class="skills-content">
             </div>
             <div class="skills-nav">
-                <div class="sn-btn">
+                <div id="btn-prev" class="sn-btn">
                     <i class="fas fa-angle-left"></i>
                     <p>Previous</p>
                 </div>
-                <div class="sn-btn">
+                <div id="btn-next" class="sn-btn">
                     <img class="sticker astronaut-skills" src="./IMG/astronaut-5.svg">
                     <p>Next</p>
                     <i class="fas fa-angle-right"></i>
                 </div>
             </div>
         </div>
-        <div class="section section--experience">
+        <div id="experience" class="section section--experience">
             <!-- <div class="se-title">
                 <h1>EXPERIENCE</h1>
             </div> -->
             <div class="se-content">
                 <div class="exp-card">
+                    <input class="company" type="hidden" value="tbig">
                     <div class="ec-content">
                         <div class="ec-content-details">
                             <div class="ecd-title">
@@ -265,7 +223,22 @@
                     <i class="fas fa-caret-down"></i>
                 </div>
                 <div class="exp-card">
+                    <input class="company" type="hidden" value="enseval">
                     <div class="ec-content">
+                        <div class="ec-content-details">
+                            <div class="ecd-title">
+                                <h1>Enseval Putera Megatrading</h1>
+                            </div>
+                            <div class="ecd-project">
+                                <h1>Project</h1>
+                                <p>GLOB</p>
+                            </div>
+                            <div class="ecd-tech">
+                                <h1>Technology</h1>
+                                <p>ReactJS, NodeJS, Firebase, AWS, Redis, WebSocket, PostgreSQL</p>
+                            </div>
+                        </div>
+
                         <img src="IMG/enseval.png">
                         <h1>Full stack Developer</h1>
                         <p>2020</p>
@@ -274,6 +247,19 @@
                 </div>
                 <div class="exp-card">
                     <div class="ec-content">
+                        <div class="ec-content-details">
+                            <div class="ecd-title">
+                                <h1>IDStar Cipta Teknologi</h1>
+                            </div>
+                            <div class="ecd-project">
+                                <h1>Project</h1>
+                                <p>Bank Mega, Bank BCA, Indosat</p>
+                            </div>
+                            <div class="ecd-tech">
+                                <h1>Technology</h1>
+                                <p>UIPath & Macro VBA</p>
+                            </div>
+                        </div>
                         <img src="IMG/idstars.png">
                         <h1>RPA Developer</h1>
                         <p>2021</p>
@@ -282,6 +268,19 @@
                 </div>
                 <div class="exp-card">
                     <div class="ec-content">
+                        <div class="ec-content-details">
+                            <div class="ecd-title">
+                                <h1>Bank Central Asia</h1>
+                            </div>
+                            <div class="ecd-project">
+                                <h1>Project</h1>
+                                <p>Log & Update Payment</p>
+                            </div>
+                            <div class="ecd-tech">
+                                <h1>Technology</h1>
+                                <p>UIPath & Macro VBA</p>
+                            </div>
+                        </div>
                         <img src="/IMG/bca.png">
                         <h1>RPA Developer</h1>
                         <p>2021</p>
@@ -290,7 +289,7 @@
                 </div>
             </div>
         </div>
-        <div class="section section--contact">
+        <div id="contact" class="section section--contact">
             <img class="sticker astronaut-contact" src="./IMG/astronaut-6.svg">
             <div class="sc-title">
                 <h1>CONTACT ME</h1>
@@ -314,6 +313,7 @@
     </div>
     <script src="Package/jquery.min.js"></script>
     <script src="JS/ascii.js"></script>
+    <script src="JS/data.js"></script>
     <script src="JS/main.js"></script>
 </body>
 
