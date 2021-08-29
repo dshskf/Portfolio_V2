@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .sc-bg {
@@ -114,7 +114,7 @@
 }
 .bar-1::after {
   content: "";
-  left: calc((1 * 7%) - 4%);
+  left: calc((1 * 7%) - 5%);
 }
 
 .bar-2::before {
@@ -123,7 +123,7 @@
 }
 .bar-2::after {
   content: "";
-  left: calc((2 * 7%) - 4%);
+  left: calc((2 * 7%) - 5%);
 }
 
 .bar-3::before {
@@ -132,7 +132,7 @@
 }
 .bar-3::after {
   content: "";
-  left: calc((3 * 7%) - 4%);
+  left: calc((3 * 7%) - 5%);
 }
 
 .bar-4::before {
@@ -141,7 +141,7 @@
 }
 .bar-4::after {
   content: "";
-  left: calc((4 * 7%) - 4%);
+  left: calc((4 * 7%) - 5%);
 }
 
 .bar-5::before {
@@ -150,7 +150,7 @@
 }
 .bar-5::after {
   content: "";
-  left: calc((5 * 7%) - 4%);
+  left: calc((5 * 7%) - 5%);
 }
 
 .bar-6::before {
@@ -159,7 +159,7 @@
 }
 .bar-6::after {
   content: "";
-  left: calc((6 * 7%) - 4%);
+  left: calc((6 * 7%) - 5%);
 }
 
 .bar-7::before {
@@ -168,7 +168,7 @@
 }
 .bar-7::after {
   content: "";
-  left: calc((7 * 7%) - 4%);
+  left: calc((7 * 7%) - 5%);
 }
 
 .bar-8::before {
@@ -177,7 +177,7 @@
 }
 .bar-8::after {
   content: "";
-  left: calc((8 * 7%) - 4%);
+  left: calc((8 * 7%) - 5%);
 }
 
 .bar-9::before {
@@ -186,7 +186,7 @@
 }
 .bar-9::after {
   content: "";
-  left: calc((9 * 7%) - 4%);
+  left: calc((9 * 7%) - 5%);
 }
 
 .bar-10::before {
@@ -195,7 +195,7 @@
 }
 .bar-10::after {
   content: "";
-  left: calc((10 * 7%) - 4%);
+  left: calc((10 * 7%) - 5%);
 }
 
 .bar-11::before {
@@ -204,7 +204,7 @@
 }
 .bar-11::after {
   content: "";
-  left: calc((11 * 7%) - 4%);
+  left: calc((11 * 7%) - 5%);
 }
 
 .bar-12::before {
@@ -213,7 +213,7 @@
 }
 .bar-12::after {
   content: "";
-  left: calc((12 * 7%) - 4%);
+  left: calc((12 * 7%) - 5%);
 }
 
 .bar-13::before {
@@ -222,7 +222,7 @@
 }
 .bar-13::after {
   content: "";
-  left: calc((13 * 7%) - 4%);
+  left: calc((13 * 7%) - 5%);
 }
 
 .bar-14::before {
@@ -231,7 +231,7 @@
 }
 .bar-14::after {
   content: "";
-  left: calc((14 * 7%) - 4%);
+  left: calc((14 * 7%) - 5%);
 }
 
 .astronaut-skills {
@@ -240,6 +240,7 @@
   top: -50px;
   transform: rotate(10deg) rotateY(180deg);
   z-index: 1;
+  transition: all 0.4s;
 }
 
 .skills-nav {
@@ -266,10 +267,19 @@
   border-radius: 20px;
   color: #fca311;
   position: relative;
-  z-index: 1;
+  border: 2px solid #2d3043;
+  transition: all 0.2s;
 }
-.sn-btn:nth-child(1) {
-  background: white;
+.sn-btn:hover {
+  border: 2px solid #fca311;
+}
+.sn-btn:hover .astronaut-skills {
+  transform: rotate(10deg) rotateY(180deg) translateY(-10px);
+}
+.sn-btn p,
+.sn-btn i {
+  z-index: 1;
+  color: #fca311;
 }
 .sn-btn i {
   font-size: 1.5rem;

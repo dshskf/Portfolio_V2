@@ -1,111 +1,48 @@
 @use 'color'as *;
 
-@mixin main($frame: title, $time:2s, $delay: 0s) {
-    @include trn($frame $time ease-in-out $delay backwards);
-
-    @keyframes title {
-        0% {
-            transform: translateX(-1000px);
-            filter: blur(10px);
-        }
-
-        100% {
-            transform: translateX(0);
-            filter: blur(0px);
-        }
+@mixin about(
+  $frame: bounce,
+  $time: 1s,
+  $delay: 0s,
+  $iteration: infinite,
+  $alternate: alternate
+) {
+  @include trn($frame $time ease-in-out $iteration $delay both $alternate);
+  @keyframes sticker {
+    0% {
+      transform: translate(0px);
     }
 
-    @keyframes button {
-        0% {
-            transform: translateY(100px);
-            filter: opacity(0);
-        }
-
-        100% {
-            transform: translateY(0);
-            filter: opacity(1);
-        }
+    100% {
+      transform: translate(10px, -10px);
     }
-
-    @keyframes footer {
-        0% {
-            transform: translateX(400px);
-        }
-
-        100% {
-            transform: translateX(0);
-        }
-    }
+  }
 }
 
+@mixin education(
+  $frame: bounce,
+  $time: 1s,
+  $delay: 0s,
+  $iteration: infinite,
+  $alternate: alternate
+) {
+  @include trn($frame $time ease $iteration $delay both $alternate);
 
-@mixin welcome($frame: bounce, $time:.75s, $delay: 0s, $iteration:infinite) {
-    @include trn($frame $time ease-in $iteration $delay forwards);
-
-    @keyframes bounce {
-        0% {
-            border-radius: 50%;
-            transform: scale(1);
-            filter: opacity(.8);
-        }
-
-        100% {
-            border-radius: 50%;
-            filter: opacity(1);
-            transform: scale(1.1);
-        }
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 2px $primary;
     }
+
+    100% {
+      box-shadow: 0 0 8px 2px $primary;
+    }
+  }
 }
-
-
-@mixin about($frame: bounce, $time:1s, $delay: 0s, $iteration:infinite, $alternate:normal) {
-    
-    filter: opacity(0);
-    @include trn($frame $time ease-in $iteration $delay forwards $alternate);
-
-    @keyframes a-title {
-        0% {
-            top: -200px;
-            filter: opacity(0);
-        }
-
-        100% {
-            top: 40px;
-            filter: opacity(1);
-        }
-    }
-
-    @keyframes a-whoami {
-        0% {
-            margin-top: 40px;
-            filter: opacity(0);
-        }
-
-        100% {
-            margin-top: 0px;
-            filter: opacity(1);
-        }
-    }
-
-    @keyframes a-info {
-        0% {
-            transform: translateX(100px);
-            filter: opacity(0);
-        }
-
-        100% {
-            transform: translateX(0px);
-            filter: opacity(1);
-        }
-    }
-}
-
-
 
 @mixin trn($transition) {
-    -webkit-animation: $transition;
-    -moz-animation: $transition;
-    -ms-animation: $transition;
-    -o-animation: $transition;
-    animation: $transition;
+  -webkit-animation: $transition;
+  -moz-animation: $transition;
+  -ms-animation: $transition;
+  -o-animation: $transition;
+  animation: $transition;
 }

@@ -1,24 +1,33 @@
 $(document).ready(function () {
-    (function () {
-        for (var x = 0; x < 1; x++) {
-            console.log(x)
-        }
-    })()
-
+    $(window).bind('load', function () {
+        // alert("Loaded")
+    })
 
     let skillIndex = 0,
         cardTracker = {}
 
 
-    $('.nav-link').click(function () {
+    $('.mp-navbar p, .mp-navbar i').click(function () {
         // var link = document.createElement('a');
         // link.href = 'https://drive.google.com/file/d/1YgnLGE6m-F8qMYK5EwONM0dqLooXJ2z3/view?usp=sharing';
         // link.download = 'file.pdf';
         // link.dispatchEvent(new MouseEvent('click'));
-        // $('.section--education').scrollIntoView();        
-        document.getElementById($(this).text().toLowerCase()).scrollIntoView({ behavior: "smooth" });
+        // $('.section--education').scrollIntoView();   
+        const clickedItem = $(this).text() ? $(this).text().toLowerCase() : $(this).attr('data-icon')
 
+        document.getElementById(clickedItem).scrollIntoView({ behavior: "smooth" });
     })
+
+    $('.mp-btn div').click(function () {
+        const url = $(this).index() === 0 ?
+            'https://drive.google.com/file/d/1YgnLGE6m-F8qMYK5EwONM0dqLooXJ2z3/view?usp=sharing'
+            :
+            'https://wa.me/6282111404545'
+
+        window.open(url, '_blank').focus();
+        return false;
+    })
+
 
 
     const handlerSkillsNav = num => {
@@ -58,6 +67,10 @@ $(document).ready(function () {
 
     let isAnimated = false
     $('#btn-prev').click(function () {
+        if (skillIndex - 1 < 0) {
+            return false
+        }
+
         if (!isAnimated) {
             isAnimated = true
         } else {
@@ -76,11 +89,15 @@ $(document).ready(function () {
                 setTimeout(() => {
                     isAnimated = false
                 }, 1000)
-            }, 1000)
+            }, 500)
+        }
+    })
+
+    $('#btn-next').click(function () {
+        if (skillIndex + 1 > Object.keys(skillsData).length - 1) {
+            return false
         }
 
-    })
-    $('#btn-next').click(function () {
         if (!isAnimated) {
             isAnimated = true
         } else {
@@ -99,7 +116,7 @@ $(document).ready(function () {
                 setTimeout(() => {
                     isAnimated = false
                 }, 1000)
-            }, 1000)
+            }, 500)
         }
 
     })
@@ -120,36 +137,6 @@ $(document).ready(function () {
 
 
  // $('.about-skill').trigger('click');
-        // let c = document.getElementById("education"),
-        //     cWidth = c.getBoundingClientRect().width,
-        //     cHeight = c.getBoundingClientRect().height
-
-        // c.width = cWidth;
-        // c.height = cHeight;
-
-        // var ctx = c.getContext("2d");
-        // ctx.font = "40px sans-serif";
-        // let charData = ['◻', '△', 'O', 'X'],
-        //     colorData = ['#CE9EC1', '#76C6B2', '#E85636', '#919FCC']
-
-        // for (let i = 0; i < 10; i++) {
-        //     let random_w = Math.random() * cWidth,
-        //         random_h = Math.random() * cHeight,
-        //         shuffle = Math.floor(Math.random() * 3)
-        //     ctx.beginPath();
-        //     ctx.lineWidth = "4";
-        //     ctx.strokeStyle = '#ffffff';
-        //     // ctx.fillText(String.fromCharCode(Math.floor((Math.random() + (Math.random() * 100)) * 120)), random_w, random_h);
-        //     ctx.arc(random_w, random_h, 1, 0, 2 * Math.PI, false);
-        //     ctx.shadowBlur = 8;
-        //     ctx.shadowColor = '#ffffff';
-        //     // ctx.fillStyle = this.color;
-        //     ctx.fillStyle = colorData[shuffle]
-        //     // ctx.fillText(charData[shuffle], random_w, random_h);
-        //     ctx.stroke();
-        // }
-
-
 
 //                let appendText = () => {
         //                    let words = "Welcome...",

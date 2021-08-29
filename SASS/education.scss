@@ -1,5 +1,6 @@
 @use 'color'as *;
 @use 'default'as *;
+@use 'keyframes'as k;
 
 .section--education {
   canvas {
@@ -36,7 +37,7 @@
     top: 10.6%;
     left: 17%;
     border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 20px;    
   }
 
   // &::after {
@@ -69,6 +70,7 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+  
 }
 
 .education-title {
@@ -124,7 +126,7 @@
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   position: relative;
-  box-shadow: 0 0 4px $primary;
+  box-shadow: 0 0 8px $primary;
 
   &::before,
   &::after {

@@ -23,12 +23,11 @@ body {
 
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
   // background: $primary;
-  border-radius: 8px;
 }
 
 .container {
@@ -37,6 +36,8 @@ body {
   overflow-x: hidden;
   padding: 0;
   position: relative;
+  background: $background;
+  z-index: -1;
   @include flex();
 }
 
@@ -72,16 +73,30 @@ body {
   height: 15%;
   @include flex(center, space-around);
 
-  p {
+  p,
+  i {
+    cursor: pointer;
     color: white;
     font-size: 1.2rem;
+  }
+
+  i {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 20%;
+    display: none;
+
+    &:hover {
+      color: $primary;
+      text-shadow: 0 0 4px $primary;
+    }
   }
 }
 
 .nav-link {
   cursor: pointer;
   border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;  
+  border-bottom: 4px solid transparent;
   transition: all 0.2s;
 
   &:hover {
@@ -113,28 +128,13 @@ body {
   h1 {
     color: $background;
     font-size: clamp(3rem, 4.5vw, 4rem);
-    // @include main();
   }
 
   p {
     color: $text;
     font-size: clamp(1.5rem, 2vw, 3rem);
     font-weight: bold;
-    // @include main(title, 2s, .2s);
   }
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   width: 140%;
-  //   height: 180%;
-  //   left: -20%;
-  //   border-radius: 20%;
-  //   border-top: 10px solid transparent;
-  //   border-bottom: 10px solid transparent;
-  //   border-left: 10px solid $background;
-  //   border-right: 10px solid $background;
-  // }
 }
 
 .mp-bg {
@@ -164,24 +164,51 @@ body {
     background: $background;
     border-radius: 4px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 
     &:nth-child(1) {
+      transition: all 0.2s;
+      
+      &:hover {
+        background: $dark-background;
+        a,
+        i {
+          color: $primary;
+        }        
+      }
     }
 
     &:nth-child(2) {
       background: transparent;
-      border: 1px solid white;
+      border: 2px solid white;
+      transition: all 0.2s;
+
+      &:hover {
+        background: $text;
+        a,
+        i {
+          color: $background;
+        }
+      }
+    }
+
+    a,
+    i {
+      transition: all 0.2s;
     }
 
     a {
       color: white;
       text-decoration: none;
+      z-index: 1;
     }
 
     i {
       font-size: 20px;
       margin-right: 10px;
       color: white;
+      z-index: 1;
     }
   }
 }

@@ -107,7 +107,7 @@
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   position: relative;
-  box-shadow: 0 0 4px #fca311;
+  box-shadow: 0 0 8px #fca311;
 }
 .education-item::before, .education-item::after {
   content: "";
